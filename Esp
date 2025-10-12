@@ -1,43 +1,140 @@
-local Players = game:GetService("Players"):GetChildren()
+local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
-local highlight = Instance.new("Highlight")
-highlight.Name = "Highlight"
 
-for i, v in pairs(Players) do
-    repeat wait() until v.Character
-    if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
-        local highlightClone = highlight:Clone()
-        highlightClone.Adornee = v.Character
-        highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
-        highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-        highlightClone.Name = "Highlight"
-    end
-end
-
-game.Players.PlayerAdded:Connect(function(player)
-    repeat wait() until player.Character
-    if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
-        local highlightClone = highlight:Clone()
-        highlightClone.Adornee = player.Character
-        highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart")
-        highlightClone.Name = "Highlight"
-    end
-end)
-
-game.Players.PlayerRemoving:Connect(function(playerRemoved)
-    playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
-end)
-
-RunService.Heartbeat:Connect(function()
-    for i, v in pairs(Players) do
-        repeat wait() until v.Character
-        if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
-            local highlightClone = highlight:Clone()
-            highlightClone.Adornee = v.Character
-            highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
-            highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-            highlightClone.Name = "Highlight"
-            task.wait()
+-- Function to create highlight + nametag + health bar with UI enhancements
+local function createHighlight(character, player)
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        -- Check if highlight already exists
+        if not character.HumanoidRootPart:FindFirstChild("Highlight") then
+            local hl = Instance.new("Highlight")
+            hl.Adornee = character
+            hl.Parent = character.HumanoidRootPart
+            hl.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+            hl.FillTransparency = 1 -- no fill
+            hl.OutlineTransparency = 0
+            hl.Name = "Highlight"
+            
+            -- Initial outline color
+            local humanoid = character:FindFirstChildOfClass("Humanoid")
+            if humanoid and humanoid.Health > 0 then
+                hl.OutlineColor = Color3.fromRGB(0, 255, 0) -- green alive
+            else
+                hl.OutlineColor = Color3.fromRGB(255, 0, 0) -- red dead
+            end
         end
+        
+        -- Add BillboardGui for name + health
+        if not character:FindFirstChild("PlayerHUD") then
+            local billboard = Instance.new("BillboardGui")
+            billboard.Name = "PlayerHUD"
+            billboard.Adornee = character:FindFirstChild("Head")
+            billboard.Size = UDim2.new(0, 150, 0, 50)
+            billboard.StudsOffset = Vector3.new(0, 2.5, 0)
+            billboard.AlwaysOnTop = true
+            billboard.Parent = character
+
+            -- Name Label
+            local nameLabel = Instance.new("TextLabel")
+            nameLabel.Name = "NameLabel"
+            nameLabel.Size = UDim2.new(1, 0, 0.4, 0)
+            nameLabel.Position = UDim2.new(0, 0, 0, 0)
+            nameLabel.BackgroundTransparency = 0.5
+            nameLabel.BackgroundColor3 = Color3.fromRGB(0,0,0)
+            nameLabel.Text = player.Name
+            nameLabel.TextColor3 = Color3.new(1,1,1)
+            nameLabel.TextScaled = true
+            nameLabel.Font = Enum.Font.SourceSansBold
+            nameLabel.Parent = billboard
+
+            -- Add UICorner and black UIStroke to name
+            local nameCorner = Instance.new("UICorner")
+            nameCorner.CornerRadius = UDim.new(0, 5)
+            nameCorner.Parent = nameLabel
+            local nameStroke = Instance.new("UIStroke")
+            nameStroke.Color = Color3.fromRGB(0,0,0) -- black stroke
+            nameStroke.Thickness = 1
+            nameStroke.Parent = nameLabel
+
+            -- Health Bar
+            local healthBar = Instance.new("Frame")
+            healthBar.Name = "HealthBar"
+            healthBar.Size = UDim2.new(1, -4, 0.2, 0) -- thinner
+            healthBar.Position = UDim2.new(0, 2, 0.5, 2)
+            healthBar.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+            healthBar.BorderSizePixel = 0
+            healthBar.Parent = billboard
+
+            -- Add UICorner and black UIStroke to health bar
+            local healthCorner = Instance.new("UICorner")
+            healthCorner.CornerRadius = UDim.new(0, 5)
+            healthCorner.Parent = healthBar
+            local healthStroke = Instance.new("UIStroke")
+            healthStroke.Color = Color3.fromRGB(0,0,0) -- black stroke
+            healthStroke.Thickness = 1
+            healthStroke.Parent = healthBar
+        end
+    end
 end
+
+-- Apply highlight to existing players
+for _, player in pairs(Players:GetPlayers()) do
+    player.CharacterAdded:Connect(function(char)
+        createHighlight(char, player)
+    end)
+    if player.Character then
+        createHighlight(player.Character, player)
+    end
+end
+
+-- Player added
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(char)
+        createHighlight(char, player)
+    end)
+end)
+
+-- Player removing
+Players.PlayerRemoving:Connect(function(player)
+    if player.Character then
+        local hrp = player.Character:FindFirstChild("HumanoidRootPart")
+        if hrp then
+            local hl = hrp:FindFirstChild("Highlight")
+            if hl then hl:Destroy() end
+        end
+        local hud = player.Character:FindFirstChild("PlayerHUD")
+        if hud then hud:Destroy() end
+    end
+end)
+
+-- Update outline color and health bar every heartbeat
+RunService.Heartbeat:Connect(function()
+    for _, player in pairs(Players:GetPlayers()) do
+        local char = player.Character
+        if char and char:FindFirstChild("HumanoidRootPart") then
+            local hl = char.HumanoidRootPart:FindFirstChild("Highlight")
+            local humanoid = char:FindFirstChildOfClass("Humanoid")
+            local hud = char:FindFirstChild("PlayerHUD")
+            if hl and humanoid then
+                if humanoid.Health > 0 then
+                    hl.OutlineColor = Color3.fromRGB(0, 255, 0)
+                else
+                    hl.OutlineColor = Color3.fromRGB(255, 0, 0)
+                end
+            end
+
+            if hud and humanoid then
+                local healthBar = hud:FindFirstChild("HealthBar")
+                if healthBar then
+                    healthBar.Size = UDim2.new(math.clamp(humanoid.Health / humanoid.MaxHealth,0,1), -4, 0.2, 0)
+                    if humanoid.Health / humanoid.MaxHealth > 0.5 then
+                        healthBar.BackgroundColor3 = Color3.fromRGB(0,255,0)
+                    elseif humanoid.Health / humanoid.MaxHealth > 0.2 then
+                        healthBar.BackgroundColor3 = Color3.fromRGB(255,165,0)
+                    else
+                        healthBar.BackgroundColor3 = Color3.fromRGB(255,0,0)
+                    end
+                end
+            end
+        end
+    end
 end)
