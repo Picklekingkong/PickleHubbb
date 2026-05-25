@@ -1,0 +1,6172 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Reshade = Instance.new("ScreenGui")
+local Menu = Instance.new("Frame")
+local Effects = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local FXexample = Instance.new("Frame")
+local Button = Instance.new("TextButton")
+local FXTitle = Instance.new("TextLabel")
+local Check = Instance.new("ImageLabel")
+local FXSkyboxes = Instance.new("Frame")
+local Button_2 = Instance.new("TextButton")
+local FXTitle_2 = Instance.new("TextLabel")
+local Check_2 = Instance.new("ImageLabel")
+local Skyboxes = Instance.new("Folder")
+local AmbienceSFX = Instance.new("Folder")
+local FXLightingConfiguration = Instance.new("Frame")
+local Button_3 = Instance.new("TextButton")
+local FXTitle_3 = Instance.new("TextLabel")
+local Check_3 = Instance.new("ImageLabel")
+local FXReflection = Instance.new("Frame")
+local Button_4 = Instance.new("TextButton")
+local FXTitle_4 = Instance.new("TextLabel")
+local Check_4 = Instance.new("ImageLabel")
+local FXMotionBlur = Instance.new("Frame")
+local Button_5 = Instance.new("TextButton")
+local FXTitle_5 = Instance.new("TextLabel")
+local Check_5 = Instance.new("ImageLabel")
+local FXTonemapper = Instance.new("Frame")
+local Button_6 = Instance.new("TextButton")
+local FXTitle_6 = Instance.new("TextLabel")
+local Check_6 = Instance.new("ImageLabel")
+local FXFog = Instance.new("Frame")
+local Button_7 = Instance.new("TextButton")
+local FXTitle_7 = Instance.new("TextLabel")
+local Check_7 = Instance.new("ImageLabel")
+local Folder = Instance.new("Folder")
+local FXLsnflare = Instance.new("Frame")
+local Button_8 = Instance.new("TextButton")
+local FXTitle_8 = Instance.new("TextLabel")
+local Check_8 = Instance.new("ImageLabel")
+local FXGlassDistortion = Instance.new("Frame")
+local Button_9 = Instance.new("TextButton")
+local FXTitle_9 = Instance.new("TextLabel")
+local Check_9 = Instance.new("ImageLabel")
+local Folder_2 = Instance.new("Folder")
+local AdjustSettings = Instance.new("Frame")
+local NotSkybox = Instance.new("ScrollingFrame")
+local Totally = Instance.new("Frame")
+local button = Instance.new("TextButton")
+local FXTitle_10 = Instance.new("TextLabel")
+local Check_10 = Instance.new("ImageLabel")
+local Skies = Instance.new("Folder")
+local Totally_2 = Instance.new("Frame")
+local button_2 = Instance.new("TextButton")
+local FXTitle_11 = Instance.new("TextLabel")
+local Check_11 = Instance.new("ImageLabel")
+local Skies_2 = Instance.new("Folder")
+local Totally_3 = Instance.new("Frame")
+local Button_10 = Instance.new("TextButton")
+local FXTitle_12 = Instance.new("TextLabel")
+local Check_12 = Instance.new("ImageLabel")
+local Skies_3 = Instance.new("Folder")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local Totally_4 = Instance.new("Frame")
+local Button_11 = Instance.new("TextButton")
+local FXTitle_13 = Instance.new("TextLabel")
+local Check_13 = Instance.new("ImageLabel")
+local Skies_4 = Instance.new("Folder")
+local Totally_5 = Instance.new("Frame")
+local Button_12 = Instance.new("TextButton")
+local FXTitle_14 = Instance.new("TextLabel")
+local Check_14 = Instance.new("ImageLabel")
+local Skies_5 = Instance.new("Folder")
+local Totally_6 = Instance.new("Frame")
+local Button_13 = Instance.new("TextButton")
+local FXTitle_15 = Instance.new("TextLabel")
+local Check_15 = Instance.new("ImageLabel")
+local Skies_6 = Instance.new("Folder")
+local Totally_7 = Instance.new("Frame")
+local Button_14 = Instance.new("TextButton")
+local FXTitle_16 = Instance.new("TextLabel")
+local Check_16 = Instance.new("ImageLabel")
+local Skies_7 = Instance.new("Folder")
+local Totally_8 = Instance.new("Frame")
+local Button_15 = Instance.new("TextButton")
+local FXTitle_17 = Instance.new("TextLabel")
+local Check_17 = Instance.new("ImageLabel")
+local Skies_8 = Instance.new("Folder")
+local Totally_9 = Instance.new("Frame")
+local Button_16 = Instance.new("TextButton")
+local FXTitle_18 = Instance.new("TextLabel")
+local Check_18 = Instance.new("ImageLabel")
+local Skies_9 = Instance.new("Folder")
+local LightingConfig = Instance.new("ScrollingFrame")
+local Ambien = Instance.new("Frame")
+local DaCode = Instance.new("TextBox")
+local FXTitle_19 = Instance.new("TextLabel")
+local ReminderIgnore = Instance.new("TextLabel")
+local ColorOfAmbient = Instance.new("Frame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local Brig = Instance.new("Frame")
+local DaCode_2 = Instance.new("TextBox")
+local FXTitle_20 = Instance.new("TextLabel")
+local ColorOfBright = Instance.new("Frame")
+local Shifty = Instance.new("Frame")
+local DaCode_3 = Instance.new("TextBox")
+local FXTitle_21 = Instance.new("TextLabel")
+local ColorOfShiftBo = Instance.new("Frame")
+local Shiftyt = Instance.new("Frame")
+local DaCode_4 = Instance.new("TextBox")
+local FXTitle_22 = Instance.new("TextLabel")
+local ColorOfShiftt = Instance.new("Frame")
+local EnviD = Instance.new("Frame")
+local DaCode_5 = Instance.new("TextBox")
+local FXTitle_23 = Instance.new("TextLabel")
+local ColorOfEnviD = Instance.new("Frame")
+local EnviP = Instance.new("Frame")
+local DaCode_6 = Instance.new("TextBox")
+local FXTitle_24 = Instance.new("TextLabel")
+local ColorOfEnviP = Instance.new("Frame")
+local GlobalSha = Instance.new("Frame")
+local button_3 = Instance.new("TextButton")
+local FXTitle_25 = Instance.new("TextLabel")
+local Check_19 = Instance.new("ImageLabel")
+local LightingSty = Instance.new("Frame")
+local softbutton = Instance.new("TextButton")
+local Check_20 = Instance.new("ImageLabel")
+local FXTitle_26 = Instance.new("TextLabel")
+local button_4 = Instance.new("TextButton")
+local Check_21 = Instance.new("ImageLabel")
+local FXTitle_27 = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local Outdoor = Instance.new("Frame")
+local DaCode_7 = Instance.new("TextBox")
+local FXTitle_28 = Instance.new("TextLabel")
+local ColorOfOut = Instance.new("Frame")
+local Example = Instance.new("ScrollingFrame")
+local Totally_10 = Instance.new("Frame")
+local Slider = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local HeaderButtons = Instance.new("Folder")
+local Redo = Instance.new("ImageButton")
+local CreateNewPresent = Instance.new("ImageButton")
+local Undo = Instance.new("ImageButton")
+local SaveSettings = Instance.new("ImageButton")
+local Activetotop = Instance.new("TextButton")
+local Collapse = Instance.new("TextButton")
+local AutoSave = Instance.new("TextButton")
+local Header = Instance.new("Frame")
+local Title_2 = Instance.new("TextLabel")
+local VectorBarDown = Instance.new("ImageLabel")
+local Search = Instance.new("TextBox")
+local Present = Instance.new("TextButton")
+local PresentsScrolling = Instance.new("ScrollingFrame")
+local UIListLayout_5 = Instance.new("UIListLayout")
+local CloneSave = Instance.new("Frame")
+local SaveExample = Instance.new("TextButton")
+local Loading = Instance.new("Frame")
+local TitleOfShader = Instance.new("TextLabel")
+local Desc = Instance.new("TextLabel")
+local LoadingAssets = Instance.new("Frame")
+local ScreenThing = Instance.new("Frame")
+local DetailsAbout = Instance.new("TextLabel")
+
+--Properties:
+
+Reshade.Name = "Reshade"
+Reshade.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Reshade.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Menu.Name = "Menu"
+Menu.Parent = Reshade
+Menu.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Menu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Menu.BorderSizePixel = 0
+Menu.Position = UDim2.new(0.00767543959, 0, 0.0138888676, 0)
+Menu.Size = UDim2.new(0, 352, 0, 584)
+
+Effects.Name = "Effects"
+Effects.Parent = Menu
+Effects.Active = true
+Effects.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Effects.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Effects.BorderSizePixel = 0
+Effects.Position = UDim2.new(0.0198863633, 0, 0.0891265571, 0)
+Effects.Size = UDim2.new(0, 338, 0, 427)
+Effects.ScrollBarThickness = 5
+
+UIListLayout.Parent = Effects
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+FXexample.Name = "FXexample"
+FXexample.Parent = Effects
+FXexample.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXexample.BackgroundTransparency = 1.000
+FXexample.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXexample.BorderSizePixel = 0
+FXexample.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXexample.Size = UDim2.new(0, 126, 0, 20)
+FXexample.Visible = false
+
+Button.Name = "Button"
+Button.Parent = FXexample
+Button.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button.Size = UDim2.new(0, 16, 0, 16)
+Button.AutoButtonColor = false
+Button.Font = Enum.Font.SourceSans
+Button.Text = ""
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 14.000
+
+FXTitle.Name = "FXTitle"
+FXTitle.Parent = Button
+FXTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle.BackgroundTransparency = 1.000
+FXTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle.BorderSizePixel = 0
+FXTitle.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle.Size = UDim2.new(0, 143, 0, 16)
+FXTitle.Font = Enum.Font.TitilliumWeb
+FXTitle.Text = "Testing example"
+FXTitle.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle.TextScaled = true
+FXTitle.TextSize = 14.000
+FXTitle.TextWrapped = true
+FXTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+Check.Name = "Check"
+Check.Parent = Button
+Check.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check.BackgroundTransparency = 1.000
+Check.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check.BorderSizePixel = 0
+Check.ClipsDescendants = true
+Check.Size = UDim2.new(0, 16, 0, 16)
+Check.Visible = false
+Check.Image = "rbxassetid://18926561608"
+
+FXSkyboxes.Name = "FXSkyboxes"
+FXSkyboxes.Parent = Effects
+FXSkyboxes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXSkyboxes.BackgroundTransparency = 1.000
+FXSkyboxes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXSkyboxes.BorderSizePixel = 0
+FXSkyboxes.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXSkyboxes.Size = UDim2.new(0, 126, 0, 20)
+
+Button_2.Name = "Button"
+Button_2.Parent = FXSkyboxes
+Button_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_2.BorderSizePixel = 0
+Button_2.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_2.Size = UDim2.new(0, 16, 0, 16)
+Button_2.AutoButtonColor = false
+Button_2.Font = Enum.Font.SourceSans
+Button_2.Text = ""
+Button_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_2.TextSize = 14.000
+
+FXTitle_2.Name = "FXTitle"
+FXTitle_2.Parent = Button_2
+FXTitle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_2.BackgroundTransparency = 1.000
+FXTitle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_2.BorderSizePixel = 0
+FXTitle_2.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_2.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_2.Font = Enum.Font.TitilliumWeb
+FXTitle_2.Text = "Realistic Skyboxes"
+FXTitle_2.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_2.TextScaled = true
+FXTitle_2.TextSize = 14.000
+FXTitle_2.TextWrapped = true
+FXTitle_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_2.Name = "Check"
+Check_2.Parent = Button_2
+Check_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_2.BackgroundTransparency = 1.000
+Check_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_2.BorderSizePixel = 0
+Check_2.ClipsDescendants = true
+Check_2.Size = UDim2.new(0, 16, 0, 16)
+Check_2.Visible = false
+Check_2.Image = "rbxassetid://18926561608"
+
+Skyboxes.Name = "Skyboxes"
+Skyboxes.Parent = FXSkyboxes
+
+AmbienceSFX.Name = "AmbienceSFX"
+AmbienceSFX.Parent = Skyboxes
+
+FXLightingConfiguration.Name = "FXLightingConfiguration"
+FXLightingConfiguration.Parent = Effects
+FXLightingConfiguration.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXLightingConfiguration.BackgroundTransparency = 1.000
+FXLightingConfiguration.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXLightingConfiguration.BorderSizePixel = 0
+FXLightingConfiguration.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXLightingConfiguration.Size = UDim2.new(0, 126, 0, 20)
+
+Button_3.Name = "Button"
+Button_3.Parent = FXLightingConfiguration
+Button_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_3.BorderSizePixel = 0
+Button_3.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_3.Size = UDim2.new(0, 16, 0, 16)
+Button_3.AutoButtonColor = false
+Button_3.Font = Enum.Font.SourceSans
+Button_3.Text = ""
+Button_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_3.TextSize = 14.000
+
+FXTitle_3.Name = "FXTitle"
+FXTitle_3.Parent = Button_3
+FXTitle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_3.BackgroundTransparency = 1.000
+FXTitle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_3.BorderSizePixel = 0
+FXTitle_3.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_3.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_3.Font = Enum.Font.TitilliumWeb
+FXTitle_3.Text = "Lighting Configuration"
+FXTitle_3.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_3.TextScaled = true
+FXTitle_3.TextSize = 14.000
+FXTitle_3.TextWrapped = true
+FXTitle_3.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_3.Name = "Check"
+Check_3.Parent = Button_3
+Check_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_3.BackgroundTransparency = 1.000
+Check_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_3.BorderSizePixel = 0
+Check_3.ClipsDescendants = true
+Check_3.Size = UDim2.new(0, 16, 0, 16)
+Check_3.Visible = false
+Check_3.Image = "rbxassetid://18926561608"
+
+FXReflection.Name = "FXReflection"
+FXReflection.Parent = Effects
+FXReflection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXReflection.BackgroundTransparency = 1.000
+FXReflection.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXReflection.BorderSizePixel = 0
+FXReflection.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXReflection.Size = UDim2.new(0, 126, 0, 20)
+
+Button_4.Name = "Button"
+Button_4.Parent = FXReflection
+Button_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_4.BorderSizePixel = 0
+Button_4.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_4.Size = UDim2.new(0, 16, 0, 16)
+Button_4.AutoButtonColor = false
+Button_4.Font = Enum.Font.SourceSans
+Button_4.Text = ""
+Button_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_4.TextSize = 14.000
+
+FXTitle_4.Name = "FXTitle"
+FXTitle_4.Parent = Button_4
+FXTitle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_4.BackgroundTransparency = 1.000
+FXTitle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_4.BorderSizePixel = 0
+FXTitle_4.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_4.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_4.Font = Enum.Font.TitilliumWeb
+FXTitle_4.Text = "Atheablol's Reflection"
+FXTitle_4.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_4.TextScaled = true
+FXTitle_4.TextSize = 14.000
+FXTitle_4.TextWrapped = true
+FXTitle_4.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_4.Name = "Check"
+Check_4.Parent = Button_4
+Check_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_4.BackgroundTransparency = 1.000
+Check_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_4.BorderSizePixel = 0
+Check_4.ClipsDescendants = true
+Check_4.Size = UDim2.new(0, 16, 0, 16)
+Check_4.Visible = false
+Check_4.Image = "rbxassetid://18926561608"
+
+FXMotionBlur.Name = "FXMotionBlur"
+FXMotionBlur.Parent = Effects
+FXMotionBlur.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXMotionBlur.BackgroundTransparency = 1.000
+FXMotionBlur.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXMotionBlur.BorderSizePixel = 0
+FXMotionBlur.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXMotionBlur.Size = UDim2.new(0, 126, 0, 20)
+
+Button_5.Name = "Button"
+Button_5.Parent = FXMotionBlur
+Button_5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_5.BorderSizePixel = 0
+Button_5.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_5.Size = UDim2.new(0, 16, 0, 16)
+Button_5.AutoButtonColor = false
+Button_5.Font = Enum.Font.SourceSans
+Button_5.Text = ""
+Button_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_5.TextSize = 14.000
+
+FXTitle_5.Name = "FXTitle"
+FXTitle_5.Parent = Button_5
+FXTitle_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_5.BackgroundTransparency = 1.000
+FXTitle_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_5.BorderSizePixel = 0
+FXTitle_5.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_5.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_5.Font = Enum.Font.TitilliumWeb
+FXTitle_5.Text = "Motion Blur"
+FXTitle_5.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_5.TextScaled = true
+FXTitle_5.TextSize = 14.000
+FXTitle_5.TextWrapped = true
+FXTitle_5.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_5.Name = "Check"
+Check_5.Parent = Button_5
+Check_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_5.BackgroundTransparency = 1.000
+Check_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_5.BorderSizePixel = 0
+Check_5.ClipsDescendants = true
+Check_5.Size = UDim2.new(0, 16, 0, 16)
+Check_5.Visible = false
+Check_5.Image = "rbxassetid://18926561608"
+
+FXTonemapper.Name = "FXTonemapper"
+FXTonemapper.Parent = Effects
+FXTonemapper.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTonemapper.BackgroundTransparency = 1.000
+FXTonemapper.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTonemapper.BorderSizePixel = 0
+FXTonemapper.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXTonemapper.Size = UDim2.new(0, 126, 0, 20)
+
+Button_6.Name = "Button"
+Button_6.Parent = FXTonemapper
+Button_6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_6.BorderSizePixel = 0
+Button_6.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_6.Size = UDim2.new(0, 16, 0, 16)
+Button_6.AutoButtonColor = false
+Button_6.Font = Enum.Font.SourceSans
+Button_6.Text = ""
+Button_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_6.TextSize = 14.000
+
+FXTitle_6.Name = "FXTitle"
+FXTitle_6.Parent = Button_6
+FXTitle_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_6.BackgroundTransparency = 1.000
+FXTitle_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_6.BorderSizePixel = 0
+FXTitle_6.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_6.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_6.Font = Enum.Font.TitilliumWeb
+FXTitle_6.Text = "AdaptiveTonemapper"
+FXTitle_6.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_6.TextScaled = true
+FXTitle_6.TextSize = 14.000
+FXTitle_6.TextWrapped = true
+FXTitle_6.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_6.Name = "Check"
+Check_6.Parent = Button_6
+Check_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_6.BackgroundTransparency = 1.000
+Check_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_6.BorderSizePixel = 0
+Check_6.ClipsDescendants = true
+Check_6.Size = UDim2.new(0, 16, 0, 16)
+Check_6.Visible = false
+Check_6.Image = "rbxassetid://18926561608"
+
+FXFog.Name = "FXFog"
+FXFog.Parent = Effects
+FXFog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXFog.BackgroundTransparency = 1.000
+FXFog.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXFog.BorderSizePixel = 0
+FXFog.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXFog.Size = UDim2.new(0, 126, 0, 20)
+
+Button_7.Name = "Button"
+Button_7.Parent = FXFog
+Button_7.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_7.BorderSizePixel = 0
+Button_7.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_7.Size = UDim2.new(0, 16, 0, 16)
+Button_7.AutoButtonColor = false
+Button_7.Font = Enum.Font.SourceSans
+Button_7.Text = ""
+Button_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_7.TextSize = 14.000
+
+FXTitle_7.Name = "FXTitle"
+FXTitle_7.Parent = Button_7
+FXTitle_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_7.BackgroundTransparency = 1.000
+FXTitle_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_7.BorderSizePixel = 0
+FXTitle_7.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_7.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_7.Font = Enum.Font.TitilliumWeb
+FXTitle_7.Text = "AdaptiveFog"
+FXTitle_7.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_7.TextScaled = true
+FXTitle_7.TextSize = 14.000
+FXTitle_7.TextWrapped = true
+FXTitle_7.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_7.Name = "Check"
+Check_7.Parent = Button_7
+Check_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_7.BackgroundTransparency = 1.000
+Check_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_7.BorderSizePixel = 0
+Check_7.ClipsDescendants = true
+Check_7.Size = UDim2.new(0, 16, 0, 16)
+Check_7.Visible = false
+Check_7.Image = "rbxassetid://18926561608"
+
+Folder.Parent = FXFog
+
+FXLsnflare.Name = "FXLsnflare"
+FXLsnflare.Parent = Effects
+FXLsnflare.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXLsnflare.BackgroundTransparency = 1.000
+FXLsnflare.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXLsnflare.BorderSizePixel = 0
+FXLsnflare.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXLsnflare.Size = UDim2.new(0, 126, 0, 20)
+
+Button_8.Name = "Button"
+Button_8.Parent = FXLsnflare
+Button_8.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_8.BorderSizePixel = 0
+Button_8.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_8.Size = UDim2.new(0, 16, 0, 16)
+Button_8.AutoButtonColor = false
+Button_8.Font = Enum.Font.SourceSans
+Button_8.Text = ""
+Button_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_8.TextSize = 14.000
+
+FXTitle_8.Name = "FXTitle"
+FXTitle_8.Parent = Button_8
+FXTitle_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_8.BackgroundTransparency = 1.000
+FXTitle_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_8.BorderSizePixel = 0
+FXTitle_8.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_8.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_8.Font = Enum.Font.TitilliumWeb
+FXTitle_8.Text = "BaBa: Lensflare"
+FXTitle_8.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_8.TextScaled = true
+FXTitle_8.TextSize = 14.000
+FXTitle_8.TextWrapped = true
+FXTitle_8.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_8.Name = "Check"
+Check_8.Parent = Button_8
+Check_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_8.BackgroundTransparency = 1.000
+Check_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_8.BorderSizePixel = 0
+Check_8.ClipsDescendants = true
+Check_8.Size = UDim2.new(0, 16, 0, 16)
+Check_8.Visible = false
+Check_8.Image = "rbxassetid://18926561608"
+
+FXGlassDistortion.Name = "FXGlassDistortion"
+FXGlassDistortion.Parent = Effects
+FXGlassDistortion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXGlassDistortion.BackgroundTransparency = 1.000
+FXGlassDistortion.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXGlassDistortion.BorderSizePixel = 0
+FXGlassDistortion.Position = UDim2.new(0, 0, 0.0187165774, 0)
+FXGlassDistortion.Size = UDim2.new(0, 126, 0, 20)
+
+Button_9.Name = "Button"
+Button_9.Parent = FXGlassDistortion
+Button_9.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_9.BorderSizePixel = 0
+Button_9.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_9.Size = UDim2.new(0, 16, 0, 16)
+Button_9.AutoButtonColor = false
+Button_9.Font = Enum.Font.SourceSans
+Button_9.Text = ""
+Button_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_9.TextSize = 14.000
+
+FXTitle_9.Name = "FXTitle"
+FXTitle_9.Parent = Button_9
+FXTitle_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_9.BackgroundTransparency = 1.000
+FXTitle_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_9.BorderSizePixel = 0
+FXTitle_9.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_9.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_9.Font = Enum.Font.TitilliumWeb
+FXTitle_9.Text = "Extra Glass Reflections"
+FXTitle_9.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_9.TextScaled = true
+FXTitle_9.TextSize = 14.000
+FXTitle_9.TextWrapped = true
+FXTitle_9.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_9.Name = "Check"
+Check_9.Parent = Button_9
+Check_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_9.BackgroundTransparency = 1.000
+Check_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_9.BorderSizePixel = 0
+Check_9.ClipsDescendants = true
+Check_9.Size = UDim2.new(0, 16, 0, 16)
+Check_9.Visible = false
+Check_9.Image = "rbxassetid://18926561608"
+
+Folder_2.Parent = FXGlassDistortion
+
+AdjustSettings.Name = "AdjustSettings"
+AdjustSettings.Parent = Menu
+AdjustSettings.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+AdjustSettings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AdjustSettings.BorderSizePixel = 0
+AdjustSettings.Position = UDim2.new(0.0198863633, 0, 0.833635509, 0)
+AdjustSettings.Size = UDim2.new(0, 338, 0, 90)
+
+NotSkybox.Name = "NotSkybox"
+NotSkybox.Parent = AdjustSettings
+NotSkybox.Active = true
+NotSkybox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+NotSkybox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NotSkybox.BorderSizePixel = 0
+NotSkybox.Position = UDim2.new(0, 0, -0.00358989881, 0)
+NotSkybox.Size = UDim2.new(0, 338, 0, 90)
+NotSkybox.Visible = false
+NotSkybox.CanvasSize = UDim2.new(0, 0, 3.77999997, 0)
+NotSkybox.ScrollBarThickness = 5
+
+Totally.Name = "Totally"
+Totally.Parent = NotSkybox
+Totally.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally.BackgroundTransparency = 1.000
+Totally.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally.BorderSizePixel = 0
+Totally.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally.Size = UDim2.new(0, 126, 0, 20)
+
+button.Name = "button"
+button.Parent = Totally
+button.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button.BorderSizePixel = 0
+button.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+button.Size = UDim2.new(0, 16, 0, 16)
+button.AutoButtonColor = false
+button.Font = Enum.Font.SourceSans
+button.Text = ""
+button.TextColor3 = Color3.fromRGB(0, 0, 0)
+button.TextSize = 14.000
+
+FXTitle_10.Name = "FXTitle"
+FXTitle_10.Parent = button
+FXTitle_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_10.BackgroundTransparency = 1.000
+FXTitle_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_10.BorderSizePixel = 0
+FXTitle_10.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_10.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_10.Font = Enum.Font.TitilliumWeb
+FXTitle_10.Text = "CustomSky"
+FXTitle_10.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_10.TextScaled = true
+FXTitle_10.TextSize = 14.000
+FXTitle_10.TextWrapped = true
+FXTitle_10.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_10.Name = "Check"
+Check_10.Parent = button
+Check_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_10.BackgroundTransparency = 1.000
+Check_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_10.BorderSizePixel = 0
+Check_10.ClipsDescendants = true
+Check_10.Size = UDim2.new(0, 16, 0, 16)
+Check_10.Visible = false
+Check_10.Image = "rbxassetid://18926561608"
+
+Skies.Name = "Skies"
+Skies.Parent = Totally
+
+Totally_2.Name = "Totally"
+Totally_2.Parent = NotSkybox
+Totally_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_2.BackgroundTransparency = 1.000
+Totally_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_2.BorderSizePixel = 0
+Totally_2.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_2.Size = UDim2.new(0, 126, 0, 20)
+
+button_2.Name = "button"
+button_2.Parent = Totally_2
+button_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_2.BorderSizePixel = 0
+button_2.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+button_2.Size = UDim2.new(0, 16, 0, 16)
+button_2.AutoButtonColor = false
+button_2.Font = Enum.Font.SourceSans
+button_2.Text = ""
+button_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+button_2.TextSize = 14.000
+
+FXTitle_11.Name = "FXTitle"
+FXTitle_11.Parent = button_2
+FXTitle_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_11.BackgroundTransparency = 1.000
+FXTitle_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_11.BorderSizePixel = 0
+FXTitle_11.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_11.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_11.Font = Enum.Font.TitilliumWeb
+FXTitle_11.Text = "DarkSky"
+FXTitle_11.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_11.TextScaled = true
+FXTitle_11.TextSize = 14.000
+FXTitle_11.TextWrapped = true
+FXTitle_11.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_11.Name = "Check"
+Check_11.Parent = button_2
+Check_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_11.BackgroundTransparency = 1.000
+Check_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_11.BorderSizePixel = 0
+Check_11.ClipsDescendants = true
+Check_11.Size = UDim2.new(0, 16, 0, 16)
+Check_11.Visible = false
+Check_11.Image = "rbxassetid://18926561608"
+
+Skies_2.Name = "Skies"
+Skies_2.Parent = Totally_2
+
+Totally_3.Name = "Totally"
+Totally_3.Parent = NotSkybox
+Totally_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_3.BackgroundTransparency = 1.000
+Totally_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_3.BorderSizePixel = 0
+Totally_3.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_3.Size = UDim2.new(0, 126, 0, 20)
+
+Button_10.Name = "Button"
+Button_10.Parent = Totally_3
+Button_10.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_10.BorderSizePixel = 0
+Button_10.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_10.Size = UDim2.new(0, 16, 0, 16)
+Button_10.AutoButtonColor = false
+Button_10.Font = Enum.Font.SourceSans
+Button_10.Text = ""
+Button_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_10.TextSize = 14.000
+
+FXTitle_12.Name = "FXTitle"
+FXTitle_12.Parent = Button_10
+FXTitle_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_12.BackgroundTransparency = 1.000
+FXTitle_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_12.BorderSizePixel = 0
+FXTitle_12.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_12.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_12.Font = Enum.Font.TitilliumWeb
+FXTitle_12.Text = "Foggy"
+FXTitle_12.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_12.TextScaled = true
+FXTitle_12.TextSize = 14.000
+FXTitle_12.TextWrapped = true
+FXTitle_12.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_12.Name = "Check"
+Check_12.Parent = Button_10
+Check_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_12.BackgroundTransparency = 1.000
+Check_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_12.BorderSizePixel = 0
+Check_12.ClipsDescendants = true
+Check_12.Size = UDim2.new(0, 16, 0, 16)
+Check_12.Visible = false
+Check_12.Image = "rbxassetid://18926561608"
+
+Skies_3.Name = "Skies"
+Skies_3.Parent = Totally_3
+
+UIListLayout_2.Parent = NotSkybox
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 5)
+
+Totally_4.Name = "Totally"
+Totally_4.Parent = NotSkybox
+Totally_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_4.BackgroundTransparency = 1.000
+Totally_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_4.BorderSizePixel = 0
+Totally_4.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_4.Size = UDim2.new(0, 126, 0, 20)
+
+Button_11.Name = "Button"
+Button_11.Parent = Totally_4
+Button_11.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_11.BorderSizePixel = 0
+Button_11.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_11.Size = UDim2.new(0, 16, 0, 16)
+Button_11.AutoButtonColor = false
+Button_11.Font = Enum.Font.SourceSans
+Button_11.Text = ""
+Button_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_11.TextSize = 14.000
+
+FXTitle_13.Name = "FXTitle"
+FXTitle_13.Parent = Button_11
+FXTitle_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_13.BackgroundTransparency = 1.000
+FXTitle_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_13.BorderSizePixel = 0
+FXTitle_13.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_13.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_13.Font = Enum.Font.TitilliumWeb
+FXTitle_13.Text = "Normal"
+FXTitle_13.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_13.TextScaled = true
+FXTitle_13.TextSize = 14.000
+FXTitle_13.TextWrapped = true
+FXTitle_13.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_13.Name = "Check"
+Check_13.Parent = Button_11
+Check_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_13.BackgroundTransparency = 1.000
+Check_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_13.BorderSizePixel = 0
+Check_13.ClipsDescendants = true
+Check_13.Size = UDim2.new(0, 16, 0, 16)
+Check_13.Visible = false
+Check_13.Image = "rbxassetid://18926561608"
+
+Skies_4.Name = "Skies"
+Skies_4.Parent = Totally_4
+
+Totally_5.Name = "Totally"
+Totally_5.Parent = NotSkybox
+Totally_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_5.BackgroundTransparency = 1.000
+Totally_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_5.BorderSizePixel = 0
+Totally_5.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_5.Size = UDim2.new(0, 126, 0, 20)
+
+Button_12.Name = "Button"
+Button_12.Parent = Totally_5
+Button_12.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_12.BorderSizePixel = 0
+Button_12.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_12.Size = UDim2.new(0, 16, 0, 16)
+Button_12.AutoButtonColor = false
+Button_12.Font = Enum.Font.SourceSans
+Button_12.Text = ""
+Button_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_12.TextSize = 14.000
+
+FXTitle_14.Name = "FXTitle"
+FXTitle_14.Parent = Button_12
+FXTitle_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_14.BackgroundTransparency = 1.000
+FXTitle_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_14.BorderSizePixel = 0
+FXTitle_14.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_14.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_14.Font = Enum.Font.TitilliumWeb
+FXTitle_14.Text = "Rainy"
+FXTitle_14.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_14.TextScaled = true
+FXTitle_14.TextSize = 14.000
+FXTitle_14.TextWrapped = true
+FXTitle_14.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_14.Name = "Check"
+Check_14.Parent = Button_12
+Check_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_14.BackgroundTransparency = 1.000
+Check_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_14.BorderSizePixel = 0
+Check_14.ClipsDescendants = true
+Check_14.Size = UDim2.new(0, 16, 0, 16)
+Check_14.Visible = false
+Check_14.Image = "rbxassetid://18926561608"
+
+Skies_5.Name = "Skies"
+Skies_5.Parent = Totally_5
+
+Totally_6.Name = "Totally"
+Totally_6.Parent = NotSkybox
+Totally_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_6.BackgroundTransparency = 1.000
+Totally_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_6.BorderSizePixel = 0
+Totally_6.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_6.Size = UDim2.new(0, 126, 0, 20)
+
+Button_13.Name = "Button"
+Button_13.Parent = Totally_6
+Button_13.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_13.BorderSizePixel = 0
+Button_13.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_13.Size = UDim2.new(0, 16, 0, 16)
+Button_13.AutoButtonColor = false
+Button_13.Font = Enum.Font.SourceSans
+Button_13.Text = ""
+Button_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_13.TextSize = 14.000
+
+FXTitle_15.Name = "FXTitle"
+FXTitle_15.Parent = Button_13
+FXTitle_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_15.BackgroundTransparency = 1.000
+FXTitle_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_15.BorderSizePixel = 0
+FXTitle_15.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_15.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_15.Font = Enum.Font.TitilliumWeb
+FXTitle_15.Text = "SkylineForSkydiving"
+FXTitle_15.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_15.TextScaled = true
+FXTitle_15.TextSize = 14.000
+FXTitle_15.TextWrapped = true
+FXTitle_15.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_15.Name = "Check"
+Check_15.Parent = Button_13
+Check_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_15.BackgroundTransparency = 1.000
+Check_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_15.BorderSizePixel = 0
+Check_15.ClipsDescendants = true
+Check_15.Size = UDim2.new(0, 16, 0, 16)
+Check_15.Visible = false
+Check_15.Image = "rbxassetid://18926561608"
+
+Skies_6.Name = "Skies"
+Skies_6.Parent = Totally_6
+
+Totally_7.Name = "Totally"
+Totally_7.Parent = NotSkybox
+Totally_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_7.BackgroundTransparency = 1.000
+Totally_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_7.BorderSizePixel = 0
+Totally_7.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_7.Size = UDim2.new(0, 126, 0, 20)
+
+Button_14.Name = "Button"
+Button_14.Parent = Totally_7
+Button_14.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_14.BorderSizePixel = 0
+Button_14.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_14.Size = UDim2.new(0, 16, 0, 16)
+Button_14.AutoButtonColor = false
+Button_14.Font = Enum.Font.SourceSans
+Button_14.Text = ""
+Button_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_14.TextSize = 14.000
+
+FXTitle_16.Name = "FXTitle"
+FXTitle_16.Parent = Button_14
+FXTitle_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_16.BackgroundTransparency = 1.000
+FXTitle_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_16.BorderSizePixel = 0
+FXTitle_16.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_16.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_16.Font = Enum.Font.TitilliumWeb
+FXTitle_16.Text = "Summer"
+FXTitle_16.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_16.TextScaled = true
+FXTitle_16.TextSize = 14.000
+FXTitle_16.TextWrapped = true
+FXTitle_16.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_16.Name = "Check"
+Check_16.Parent = Button_14
+Check_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_16.BackgroundTransparency = 1.000
+Check_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_16.BorderSizePixel = 0
+Check_16.ClipsDescendants = true
+Check_16.Size = UDim2.new(0, 16, 0, 16)
+Check_16.Visible = false
+Check_16.Image = "rbxassetid://18926561608"
+
+Skies_7.Name = "Skies"
+Skies_7.Parent = Totally_7
+
+Totally_8.Name = "Totally"
+Totally_8.Parent = NotSkybox
+Totally_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_8.BackgroundTransparency = 1.000
+Totally_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_8.BorderSizePixel = 0
+Totally_8.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_8.Size = UDim2.new(0, 126, 0, 20)
+
+Button_15.Name = "Button"
+Button_15.Parent = Totally_8
+Button_15.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_15.BorderSizePixel = 0
+Button_15.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_15.Size = UDim2.new(0, 16, 0, 16)
+Button_15.AutoButtonColor = false
+Button_15.Font = Enum.Font.SourceSans
+Button_15.Text = ""
+Button_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_15.TextSize = 14.000
+
+FXTitle_17.Name = "FXTitle"
+FXTitle_17.Parent = Button_15
+FXTitle_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_17.BackgroundTransparency = 1.000
+FXTitle_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_17.BorderSizePixel = 0
+FXTitle_17.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_17.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_17.Font = Enum.Font.TitilliumWeb
+FXTitle_17.Text = "Sunny"
+FXTitle_17.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_17.TextScaled = true
+FXTitle_17.TextSize = 14.000
+FXTitle_17.TextWrapped = true
+FXTitle_17.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_17.Name = "Check"
+Check_17.Parent = Button_15
+Check_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_17.BackgroundTransparency = 1.000
+Check_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_17.BorderSizePixel = 0
+Check_17.ClipsDescendants = true
+Check_17.Size = UDim2.new(0, 16, 0, 16)
+Check_17.Visible = false
+Check_17.Image = "rbxassetid://18926561608"
+
+Skies_8.Name = "Skies"
+Skies_8.Parent = Totally_8
+
+Totally_9.Name = "Totally"
+Totally_9.Parent = NotSkybox
+Totally_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_9.BackgroundTransparency = 1.000
+Totally_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_9.BorderSizePixel = 0
+Totally_9.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_9.Size = UDim2.new(0, 126, 0, 20)
+
+Button_16.Name = "Button"
+Button_16.Parent = Totally_9
+Button_16.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_16.BorderSizePixel = 0
+Button_16.Position = UDim2.new(0.055555556, 0, 0.209999993, 0)
+Button_16.Size = UDim2.new(0, 16, 0, 16)
+Button_16.AutoButtonColor = false
+Button_16.Font = Enum.Font.SourceSans
+Button_16.Text = ""
+Button_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button_16.TextSize = 14.000
+
+FXTitle_18.Name = "FXTitle"
+FXTitle_18.Parent = Button_16
+FXTitle_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_18.BackgroundTransparency = 1.000
+FXTitle_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_18.BorderSizePixel = 0
+FXTitle_18.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_18.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_18.Font = Enum.Font.TitilliumWeb
+FXTitle_18.Text = "Winter"
+FXTitle_18.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_18.TextScaled = true
+FXTitle_18.TextSize = 14.000
+FXTitle_18.TextWrapped = true
+FXTitle_18.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_18.Name = "Check"
+Check_18.Parent = Button_16
+Check_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_18.BackgroundTransparency = 1.000
+Check_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_18.BorderSizePixel = 0
+Check_18.ClipsDescendants = true
+Check_18.Size = UDim2.new(0, 16, 0, 16)
+Check_18.Visible = false
+Check_18.Image = "rbxassetid://18926561608"
+
+Skies_9.Name = "Skies"
+Skies_9.Parent = Totally_9
+
+LightingConfig.Name = "LightingConfig"
+LightingConfig.Parent = AdjustSettings
+LightingConfig.Active = true
+LightingConfig.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+LightingConfig.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LightingConfig.BorderSizePixel = 0
+LightingConfig.Position = UDim2.new(0, 0, -0.00358989881, 0)
+LightingConfig.Size = UDim2.new(0, 338, 0, 90)
+LightingConfig.Visible = false
+LightingConfig.CanvasSize = UDim2.new(0, 0, 3.77999997, 0)
+LightingConfig.ScrollBarThickness = 5
+
+Ambien.Name = "Ambien"
+Ambien.Parent = LightingConfig
+Ambien.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ambien.BackgroundTransparency = 1.000
+Ambien.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ambien.BorderSizePixel = 0
+Ambien.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Ambien.Size = UDim2.new(0, 126, 0, 20)
+
+DaCode.Name = "DaCode"
+DaCode.Parent = Ambien
+DaCode.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+DaCode.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DaCode.BorderSizePixel = 0
+DaCode.Position = UDim2.new(0.055555556, 0, 0.349999994, 0)
+DaCode.Size = UDim2.new(0, 19, 0, 16)
+DaCode.ClearTextOnFocus = false
+DaCode.Font = Enum.Font.TitilliumWeb
+DaCode.PlaceholderColor3 = Color3.fromRGB(121, 121, 121)
+DaCode.PlaceholderText = "1"
+DaCode.Text = ""
+DaCode.TextColor3 = Color3.fromRGB(255, 255, 255)
+DaCode.TextScaled = true
+DaCode.TextSize = 14.000
+DaCode.TextWrapped = true
+
+FXTitle_19.Name = "FXTitle"
+FXTitle_19.Parent = DaCode
+FXTitle_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_19.BackgroundTransparency = 1.000
+FXTitle_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_19.BorderSizePixel = 0
+FXTitle_19.Position = UDim2.new(1.16698575, 0, -0.0332603455, 0)
+FXTitle_19.Size = UDim2.new(0, 68, 0, 16)
+FXTitle_19.Font = Enum.Font.TitilliumWeb
+FXTitle_19.Text = "Ambient"
+FXTitle_19.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_19.TextScaled = true
+FXTitle_19.TextSize = 14.000
+FXTitle_19.TextWrapped = true
+FXTitle_19.TextXAlignment = Enum.TextXAlignment.Left
+
+ReminderIgnore.Name = "Reminder[Ignore]"
+ReminderIgnore.Parent = Ambien
+ReminderIgnore.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ReminderIgnore.BackgroundTransparency = 1.000
+ReminderIgnore.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ReminderIgnore.BorderSizePixel = 0
+ReminderIgnore.Position = UDim2.new(2.05198646, 0, -0.0276443474, 0)
+ReminderIgnore.Size = UDim2.new(0, 68, 0, 16)
+ReminderIgnore.Font = Enum.Font.TitilliumWeb
+ReminderIgnore.Text = "RBG Code only"
+ReminderIgnore.TextColor3 = Color3.fromRGB(171, 57, 57)
+ReminderIgnore.TextScaled = true
+ReminderIgnore.TextSize = 14.000
+ReminderIgnore.TextWrapped = true
+ReminderIgnore.TextXAlignment = Enum.TextXAlignment.Left
+
+ColorOfAmbient.Name = "ColorOfAmbient"
+ColorOfAmbient.Parent = Ambien
+ColorOfAmbient.BackgroundColor3 = Color3.fromRGB(144, 144, 144)
+ColorOfAmbient.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorOfAmbient.BorderSizePixel = 0
+ColorOfAmbient.Position = UDim2.new(0.596000016, 0, 0.349999994, 0)
+ColorOfAmbient.Size = UDim2.new(0, 19, 0, 16)
+
+UIListLayout_3.Parent = LightingConfig
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 5)
+
+Brig.Name = "Brig"
+Brig.Parent = LightingConfig
+Brig.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Brig.BackgroundTransparency = 1.000
+Brig.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Brig.BorderSizePixel = 0
+Brig.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Brig.Size = UDim2.new(0, 126, 0, 20)
+
+DaCode_2.Name = "DaCode"
+DaCode_2.Parent = Brig
+DaCode_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+DaCode_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DaCode_2.BorderSizePixel = 0
+DaCode_2.Position = UDim2.new(0.055555556, 0, 0.349999994, 0)
+DaCode_2.Size = UDim2.new(0, 19, 0, 16)
+DaCode_2.ClearTextOnFocus = false
+DaCode_2.Font = Enum.Font.TitilliumWeb
+DaCode_2.PlaceholderColor3 = Color3.fromRGB(121, 121, 121)
+DaCode_2.PlaceholderText = "1"
+DaCode_2.Text = ""
+DaCode_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+DaCode_2.TextScaled = true
+DaCode_2.TextSize = 14.000
+DaCode_2.TextWrapped = true
+
+FXTitle_20.Name = "FXTitle"
+FXTitle_20.Parent = DaCode_2
+FXTitle_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_20.BackgroundTransparency = 1.000
+FXTitle_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_20.BorderSizePixel = 0
+FXTitle_20.Position = UDim2.new(1.16698575, 0, -0.0332603455, 0)
+FXTitle_20.Size = UDim2.new(0, 68, 0, 16)
+FXTitle_20.Font = Enum.Font.TitilliumWeb
+FXTitle_20.Text = "Brightness"
+FXTitle_20.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_20.TextScaled = true
+FXTitle_20.TextSize = 14.000
+FXTitle_20.TextWrapped = true
+FXTitle_20.TextXAlignment = Enum.TextXAlignment.Left
+
+ColorOfBright.Name = "ColorOfBright"
+ColorOfBright.Parent = Brig
+ColorOfBright.BackgroundColor3 = Color3.fromRGB(144, 144, 144)
+ColorOfBright.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorOfBright.BorderSizePixel = 0
+ColorOfBright.Position = UDim2.new(0.722984135, 0, 0.349999994, 0)
+ColorOfBright.Size = UDim2.new(0, 19, 0, 16)
+
+Shifty.Name = "Shifty"
+Shifty.Parent = LightingConfig
+Shifty.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shifty.BackgroundTransparency = 1.000
+Shifty.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shifty.BorderSizePixel = 0
+Shifty.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Shifty.Size = UDim2.new(0, 126, 0, 20)
+
+DaCode_3.Name = "DaCode"
+DaCode_3.Parent = Shifty
+DaCode_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+DaCode_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DaCode_3.BorderSizePixel = 0
+DaCode_3.Position = UDim2.new(0.055555556, 0, 0.349999994, 0)
+DaCode_3.Size = UDim2.new(0, 19, 0, 16)
+DaCode_3.ClearTextOnFocus = false
+DaCode_3.Font = Enum.Font.TitilliumWeb
+DaCode_3.PlaceholderColor3 = Color3.fromRGB(121, 121, 121)
+DaCode_3.PlaceholderText = "1"
+DaCode_3.Text = ""
+DaCode_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+DaCode_3.TextScaled = true
+DaCode_3.TextSize = 14.000
+DaCode_3.TextWrapped = true
+
+FXTitle_21.Name = "FXTitle"
+FXTitle_21.Parent = DaCode_3
+FXTitle_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_21.BackgroundTransparency = 1.000
+FXTitle_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_21.BorderSizePixel = 0
+FXTitle_21.Position = UDim2.new(1.16698575, 0, -0.0332603455, 0)
+FXTitle_21.Size = UDim2.new(0, 68, 0, 16)
+FXTitle_21.Font = Enum.Font.TitilliumWeb
+FXTitle_21.Text = "ColorShift Bottom"
+FXTitle_21.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_21.TextScaled = true
+FXTitle_21.TextSize = 14.000
+FXTitle_21.TextWrapped = true
+FXTitle_21.TextXAlignment = Enum.TextXAlignment.Left
+
+ColorOfShiftBo.Name = "ColorOfShiftBo"
+ColorOfShiftBo.Parent = Shifty
+ColorOfShiftBo.BackgroundColor3 = Color3.fromRGB(144, 144, 144)
+ColorOfShiftBo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorOfShiftBo.BorderSizePixel = 0
+ColorOfShiftBo.Position = UDim2.new(0.826158762, 0, 0.349999994, 0)
+ColorOfShiftBo.Size = UDim2.new(0, 19, 0, 16)
+
+Shiftyt.Name = "Shiftyt"
+Shiftyt.Parent = LightingConfig
+Shiftyt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shiftyt.BackgroundTransparency = 1.000
+Shiftyt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shiftyt.BorderSizePixel = 0
+Shiftyt.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Shiftyt.Size = UDim2.new(0, 126, 0, 20)
+
+DaCode_4.Name = "DaCode"
+DaCode_4.Parent = Shiftyt
+DaCode_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+DaCode_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DaCode_4.BorderSizePixel = 0
+DaCode_4.Position = UDim2.new(0.055555556, 0, 0.349999994, 0)
+DaCode_4.Size = UDim2.new(0, 19, 0, 16)
+DaCode_4.ClearTextOnFocus = false
+DaCode_4.Font = Enum.Font.TitilliumWeb
+DaCode_4.PlaceholderColor3 = Color3.fromRGB(121, 121, 121)
+DaCode_4.PlaceholderText = "1"
+DaCode_4.Text = ""
+DaCode_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+DaCode_4.TextScaled = true
+DaCode_4.TextSize = 14.000
+DaCode_4.TextWrapped = true
+
+FXTitle_22.Name = "FXTitle"
+FXTitle_22.Parent = DaCode_4
+FXTitle_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_22.BackgroundTransparency = 1.000
+FXTitle_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_22.BorderSizePixel = 0
+FXTitle_22.Position = UDim2.new(1.16698575, 0, -0.0332603455, 0)
+FXTitle_22.Size = UDim2.new(0, 68, 0, 16)
+FXTitle_22.Font = Enum.Font.TitilliumWeb
+FXTitle_22.Text = "ColorShift Top"
+FXTitle_22.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_22.TextScaled = true
+FXTitle_22.TextSize = 14.000
+FXTitle_22.TextWrapped = true
+FXTitle_22.TextXAlignment = Enum.TextXAlignment.Left
+
+ColorOfShiftt.Name = "ColorOfShiftt"
+ColorOfShiftt.Parent = Shiftyt
+ColorOfShiftt.BackgroundColor3 = Color3.fromRGB(144, 144, 144)
+ColorOfShiftt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorOfShiftt.BorderSizePixel = 0
+ColorOfShiftt.Position = UDim2.new(0.826158762, 0, 0.349999994, 0)
+ColorOfShiftt.Size = UDim2.new(0, 19, 0, 16)
+
+EnviD.Name = "EnviD"
+EnviD.Parent = LightingConfig
+EnviD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnviD.BackgroundTransparency = 1.000
+EnviD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnviD.BorderSizePixel = 0
+EnviD.Position = UDim2.new(0, 0, 0.0187165774, 0)
+EnviD.Size = UDim2.new(0, 126, 0, 20)
+
+DaCode_5.Name = "DaCode"
+DaCode_5.Parent = EnviD
+DaCode_5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+DaCode_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DaCode_5.BorderSizePixel = 0
+DaCode_5.Position = UDim2.new(0.055555556, 0, 0.349999994, 0)
+DaCode_5.Size = UDim2.new(0, 19, 0, 16)
+DaCode_5.ClearTextOnFocus = false
+DaCode_5.Font = Enum.Font.TitilliumWeb
+DaCode_5.PlaceholderColor3 = Color3.fromRGB(121, 121, 121)
+DaCode_5.PlaceholderText = "1"
+DaCode_5.Text = ""
+DaCode_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+DaCode_5.TextScaled = true
+DaCode_5.TextSize = 14.000
+DaCode_5.TextWrapped = true
+
+FXTitle_23.Name = "FXTitle"
+FXTitle_23.Parent = DaCode_5
+FXTitle_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_23.BackgroundTransparency = 1.000
+FXTitle_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_23.BorderSizePixel = 0
+FXTitle_23.Position = UDim2.new(1.16698575, 0, -0.0332603455, 0)
+FXTitle_23.Size = UDim2.new(0, 100, 0, 16)
+FXTitle_23.Font = Enum.Font.TitilliumWeb
+FXTitle_23.Text = "EnvironmentDiffuseScale"
+FXTitle_23.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_23.TextScaled = true
+FXTitle_23.TextSize = 14.000
+FXTitle_23.TextWrapped = true
+FXTitle_23.TextXAlignment = Enum.TextXAlignment.Left
+
+ColorOfEnviD.Name = "ColorOfEnviD"
+ColorOfEnviD.Parent = EnviD
+ColorOfEnviD.BackgroundColor3 = Color3.fromRGB(144, 144, 144)
+ColorOfEnviD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorOfEnviD.BorderSizePixel = 0
+ColorOfEnviD.Position = UDim2.new(1.04838097, 0, 0.349999994, 0)
+ColorOfEnviD.Size = UDim2.new(0, 19, 0, 16)
+
+EnviP.Name = "EnviP"
+EnviP.Parent = LightingConfig
+EnviP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnviP.BackgroundTransparency = 1.000
+EnviP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnviP.BorderSizePixel = 0
+EnviP.Position = UDim2.new(0, 0, 0.0187165774, 0)
+EnviP.Size = UDim2.new(0, 126, 0, 20)
+
+DaCode_6.Name = "DaCode"
+DaCode_6.Parent = EnviP
+DaCode_6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+DaCode_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DaCode_6.BorderSizePixel = 0
+DaCode_6.Position = UDim2.new(0.055555556, 0, 0.349999994, 0)
+DaCode_6.Size = UDim2.new(0, 19, 0, 16)
+DaCode_6.ClearTextOnFocus = false
+DaCode_6.Font = Enum.Font.TitilliumWeb
+DaCode_6.PlaceholderColor3 = Color3.fromRGB(121, 121, 121)
+DaCode_6.PlaceholderText = "1"
+DaCode_6.Text = ""
+DaCode_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+DaCode_6.TextScaled = true
+DaCode_6.TextSize = 14.000
+DaCode_6.TextWrapped = true
+
+FXTitle_24.Name = "FXTitle"
+FXTitle_24.Parent = DaCode_6
+FXTitle_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_24.BackgroundTransparency = 1.000
+FXTitle_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_24.BorderSizePixel = 0
+FXTitle_24.Position = UDim2.new(1.16698575, 0, -0.0332603455, 0)
+FXTitle_24.Size = UDim2.new(0, 100, 0, 16)
+FXTitle_24.Font = Enum.Font.TitilliumWeb
+FXTitle_24.Text = "EnvironmentSpecularScale"
+FXTitle_24.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_24.TextScaled = true
+FXTitle_24.TextSize = 14.000
+FXTitle_24.TextWrapped = true
+FXTitle_24.TextXAlignment = Enum.TextXAlignment.Left
+
+ColorOfEnviP.Name = "ColorOfEnviP"
+ColorOfEnviP.Parent = EnviP
+ColorOfEnviP.BackgroundColor3 = Color3.fromRGB(144, 144, 144)
+ColorOfEnviP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorOfEnviP.BorderSizePixel = 0
+ColorOfEnviP.Position = UDim2.new(1.04838097, 0, 0.349999994, 0)
+ColorOfEnviP.Size = UDim2.new(0, 19, 0, 16)
+
+GlobalSha.Name = "GlobalSha"
+GlobalSha.Parent = LightingConfig
+GlobalSha.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GlobalSha.BackgroundTransparency = 1.000
+GlobalSha.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GlobalSha.BorderSizePixel = 0
+GlobalSha.Position = UDim2.new(0, 0, 0.0187165774, 0)
+GlobalSha.Size = UDim2.new(0, 126, 0, 20)
+
+button_3.Name = "button"
+button_3.Parent = GlobalSha
+button_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_3.BorderSizePixel = 0
+button_3.Position = UDim2.new(0.0529999994, 0, 0.349999994, 0)
+button_3.Size = UDim2.new(0, 19, 0, 16)
+button_3.AutoButtonColor = false
+button_3.Font = Enum.Font.SourceSans
+button_3.Text = ""
+button_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+button_3.TextSize = 14.000
+
+FXTitle_25.Name = "FXTitle"
+FXTitle_25.Parent = button_3
+FXTitle_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_25.BackgroundTransparency = 1.000
+FXTitle_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_25.BorderSizePixel = 0
+FXTitle_25.Position = UDim2.new(1.4375, 0, 0, 0)
+FXTitle_25.Size = UDim2.new(0, 143, 0, 16)
+FXTitle_25.Font = Enum.Font.TitilliumWeb
+FXTitle_25.Text = "Global Shadows"
+FXTitle_25.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_25.TextScaled = true
+FXTitle_25.TextSize = 14.000
+FXTitle_25.TextWrapped = true
+FXTitle_25.TextXAlignment = Enum.TextXAlignment.Left
+
+Check_19.Name = "Check"
+Check_19.Parent = button_3
+Check_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_19.BackgroundTransparency = 1.000
+Check_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_19.BorderSizePixel = 0
+Check_19.ClipsDescendants = true
+Check_19.Position = UDim2.new(0, 2, 0, 0)
+Check_19.Size = UDim2.new(0, 16, 0, 16)
+Check_19.Visible = false
+Check_19.Image = "rbxassetid://18926561608"
+
+LightingSty.Name = "LightingSty"
+LightingSty.Parent = LightingConfig
+LightingSty.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LightingSty.BackgroundTransparency = 1.000
+LightingSty.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LightingSty.BorderSizePixel = 0
+LightingSty.Position = UDim2.new(0, 0, 0.0904538333, 0)
+LightingSty.Size = UDim2.new(0, 126, 0, 20)
+
+softbutton.Name = "softbutton"
+softbutton.Parent = LightingSty
+softbutton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+softbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+softbutton.BorderSizePixel = 0
+softbutton.Position = UDim2.new(0.0529999994, 0, 0.349999994, 0)
+softbutton.Size = UDim2.new(0, 19, 0, 16)
+softbutton.AutoButtonColor = false
+softbutton.Font = Enum.Font.SourceSans
+softbutton.Text = ""
+softbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+softbutton.TextSize = 14.000
+
+Check_20.Name = "Check"
+Check_20.Parent = softbutton
+Check_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_20.BackgroundTransparency = 1.000
+Check_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_20.BorderSizePixel = 0
+Check_20.ClipsDescendants = true
+Check_20.Position = UDim2.new(0, 2, 0, 0)
+Check_20.Size = UDim2.new(0, 16, 0, 16)
+Check_20.Visible = false
+Check_20.Image = "rbxassetid://18926561608"
+
+FXTitle_26.Name = "FXTitle"
+FXTitle_26.Parent = softbutton
+FXTitle_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_26.BackgroundTransparency = 1.000
+FXTitle_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_26.BorderSizePixel = 0
+FXTitle_26.Position = UDim2.new(-0.299341589, 0, -0.625, 0)
+FXTitle_26.Size = UDim2.new(0, 31, 0, 10)
+FXTitle_26.Font = Enum.Font.TitilliumWeb
+FXTitle_26.Text = "Soft"
+FXTitle_26.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_26.TextScaled = true
+FXTitle_26.TextSize = 14.000
+FXTitle_26.TextWrapped = true
+
+button_4.Name = "button"
+button_4.Parent = LightingSty
+button_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+button_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_4.BorderSizePixel = 0
+button_4.Position = UDim2.new(0.291095257, 0, 0.349999994, 0)
+button_4.Size = UDim2.new(0, 19, 0, 16)
+button_4.AutoButtonColor = false
+button_4.Font = Enum.Font.SourceSans
+button_4.Text = ""
+button_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+button_4.TextSize = 14.000
+
+Check_21.Name = "Check"
+Check_21.Parent = button_4
+Check_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Check_21.BackgroundTransparency = 1.000
+Check_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Check_21.BorderSizePixel = 0
+Check_21.ClipsDescendants = true
+Check_21.Position = UDim2.new(0, 2, 0, 0)
+Check_21.Size = UDim2.new(0, 16, 0, 16)
+Check_21.Visible = false
+Check_21.Image = "rbxassetid://18926561608"
+
+FXTitle_27.Name = "FXTitle"
+FXTitle_27.Parent = button_4
+FXTitle_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_27.BackgroundTransparency = 1.000
+FXTitle_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_27.BorderSizePixel = 0
+FXTitle_27.Position = UDim2.new(-0.562499583, 0, -0.625, 0)
+FXTitle_27.Size = UDim2.new(0, 39, 0, 10)
+FXTitle_27.Font = Enum.Font.TitilliumWeb
+FXTitle_27.Text = "Realistic"
+FXTitle_27.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_27.TextScaled = true
+FXTitle_27.TextSize = 14.000
+FXTitle_27.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = LightingSty
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.508511245, 0, 0.349999994, 0)
+Title.Size = UDim2.new(0, 143, 0, 16)
+Title.Font = Enum.Font.TitilliumWeb
+Title.Text = "LightingStyle <font color=\"#FF0000\">For Lua</font>"
+Title.TextColor3 = Color3.fromRGB(171, 171, 171)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+Outdoor.Name = "Outdoor"
+Outdoor.Parent = LightingConfig
+Outdoor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Outdoor.BackgroundTransparency = 1.000
+Outdoor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Outdoor.BorderSizePixel = 0
+Outdoor.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Outdoor.Size = UDim2.new(0, 126, 0, 20)
+
+DaCode_7.Name = "DaCode"
+DaCode_7.Parent = Outdoor
+DaCode_7.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+DaCode_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DaCode_7.BorderSizePixel = 0
+DaCode_7.Position = UDim2.new(0.055555556, 0, 0.349999994, 0)
+DaCode_7.Size = UDim2.new(0, 19, 0, 16)
+DaCode_7.ClearTextOnFocus = false
+DaCode_7.Font = Enum.Font.TitilliumWeb
+DaCode_7.PlaceholderColor3 = Color3.fromRGB(121, 121, 121)
+DaCode_7.PlaceholderText = "1"
+DaCode_7.Text = ""
+DaCode_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+DaCode_7.TextScaled = true
+DaCode_7.TextSize = 14.000
+DaCode_7.TextWrapped = true
+
+FXTitle_28.Name = "FXTitle"
+FXTitle_28.Parent = DaCode_7
+FXTitle_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FXTitle_28.BackgroundTransparency = 1.000
+FXTitle_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FXTitle_28.BorderSizePixel = 0
+FXTitle_28.Position = UDim2.new(1.16698575, 0, -0.0332603455, 0)
+FXTitle_28.Size = UDim2.new(0, 68, 0, 16)
+FXTitle_28.Font = Enum.Font.TitilliumWeb
+FXTitle_28.Text = "Outdoor Ambient"
+FXTitle_28.TextColor3 = Color3.fromRGB(171, 171, 171)
+FXTitle_28.TextScaled = true
+FXTitle_28.TextSize = 14.000
+FXTitle_28.TextWrapped = true
+FXTitle_28.TextXAlignment = Enum.TextXAlignment.Left
+
+ColorOfOut.Name = "ColorOfOut"
+ColorOfOut.Parent = Outdoor
+ColorOfOut.BackgroundColor3 = Color3.fromRGB(144, 144, 144)
+ColorOfOut.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ColorOfOut.BorderSizePixel = 0
+ColorOfOut.Position = UDim2.new(0.826158762, 0, 0.349999994, 0)
+ColorOfOut.Size = UDim2.new(0, 19, 0, 16)
+
+Example.Name = "Example"
+Example.Parent = AdjustSettings
+Example.Active = true
+Example.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Example.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Example.BorderSizePixel = 0
+Example.Position = UDim2.new(0, 0, -0.00358989881, 0)
+Example.Size = UDim2.new(0, 338, 0, 90)
+Example.Visible = false
+Example.CanvasSize = UDim2.new(0, 0, 3.77999997, 0)
+Example.ScrollBarThickness = 5
+
+Totally_10.Name = "Totally"
+Totally_10.Parent = Example
+Totally_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Totally_10.BackgroundTransparency = 1.000
+Totally_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Totally_10.BorderSizePixel = 0
+Totally_10.Position = UDim2.new(0, 0, 0.0187165774, 0)
+Totally_10.Size = UDim2.new(0, 126, 0, 20)
+
+Slider.Name = "Slider"
+Slider.Parent = Totally_10
+Slider.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Slider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Slider.BorderSizePixel = 0
+Slider.Position = UDim2.new(0.0555555262, 0, 0.210000604, 0)
+Slider.Size = UDim2.new(0, 95, 0, 9)
+
+TextLabel.Parent = Slider
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(1.12631559, 0, -0.444444448, 0)
+TextLabel.Size = UDim2.new(0, 68, 0, 16)
+TextLabel.Font = Enum.Font.TitilliumWeb
+TextLabel.TextColor3 = Color3.fromRGB(171, 171, 171)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame.Parent = Slider
+Frame.BackgroundColor3 = Color3.fromRGB(71, 100, 153)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-0.0076023303, 0, 0.00604248047, 0)
+Frame.Size = UDim2.new(0, 39, 0, 9)
+
+UIListLayout_4.Parent = Example
+UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_4.Padding = UDim.new(0, 5)
+
+HeaderButtons.Name = "HeaderButtons"
+HeaderButtons.Parent = Menu
+
+Redo.Name = "Redo"
+Redo.Parent = HeaderButtons
+Redo.BackgroundColor3 = Color3.fromRGB(61, 82, 120)
+Redo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Redo.BorderSizePixel = 0
+Redo.Position = UDim2.new(0.0653409064, 0, 0.0250000004, 0)
+Redo.Size = UDim2.new(0, 13, 0, 13)
+Redo.Image = "rbxassetid://2418686949"
+
+CreateNewPresent.Name = "CreateNewPresent"
+CreateNewPresent.Parent = HeaderButtons
+CreateNewPresent.BackgroundColor3 = Color3.fromRGB(61, 82, 120)
+CreateNewPresent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CreateNewPresent.BorderSizePixel = 0
+CreateNewPresent.Position = UDim2.new(0.943181813, 0, 0.0232174713, 0)
+CreateNewPresent.Size = UDim2.new(0, 13, 0, 13)
+CreateNewPresent.Image = "rbxassetid://15081504003"
+
+Undo.Name = "Undo"
+Undo.Parent = HeaderButtons
+Undo.BackgroundColor3 = Color3.fromRGB(61, 82, 120)
+Undo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Undo.BorderSizePixel = 0
+Undo.Position = UDim2.new(0.0198863633, 0, 0.0250000004, 0)
+Undo.Size = UDim2.new(0, 13, 0, 13)
+Undo.Image = "rbxassetid://2418687610"
+
+SaveSettings.Name = "SaveSettings"
+SaveSettings.Parent = HeaderButtons
+SaveSettings.BackgroundColor3 = Color3.fromRGB(61, 82, 120)
+SaveSettings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SaveSettings.BorderSizePixel = 0
+SaveSettings.Position = UDim2.new(0.886363626, 0, 0.0232174713, 0)
+SaveSettings.Size = UDim2.new(0, 13, 0, 13)
+SaveSettings.Image = "rbxassetid://11768914234"
+
+Activetotop.Name = "Activetotop"
+Activetotop.Parent = HeaderButtons
+Activetotop.BackgroundColor3 = Color3.fromRGB(60, 84, 122)
+Activetotop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Activetotop.BorderSizePixel = 0
+Activetotop.Position = UDim2.new(0.451704532, 0, 0.0552584678, 0)
+Activetotop.Size = UDim2.new(0, 85, 0, 12)
+Activetotop.Font = Enum.Font.TitilliumWeb
+Activetotop.Text = "Active to top"
+Activetotop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Activetotop.TextSize = 14.000
+
+Collapse.Name = "Collapse"
+Collapse.Parent = HeaderButtons
+Collapse.BackgroundColor3 = Color3.fromRGB(60, 84, 122)
+Collapse.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Collapse.BorderSizePixel = 0
+Collapse.Position = UDim2.new(0.724431813, 0, 0.0552584678, 0)
+Collapse.Size = UDim2.new(0, 90, 0, 12)
+Collapse.Font = Enum.Font.TitilliumWeb
+Collapse.Text = "Collapse all"
+Collapse.TextColor3 = Color3.fromRGB(255, 255, 255)
+Collapse.TextSize = 14.000
+
+AutoSave.Name = "AutoSave"
+AutoSave.Parent = HeaderButtons
+AutoSave.BackgroundColor3 = Color3.fromRGB(99, 150, 241)
+AutoSave.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoSave.BorderSizePixel = 0
+AutoSave.Position = UDim2.new(0.713, 0, 0.0249554366, 0)
+AutoSave.Size = UDim2.new(0, 56, 0, 13)
+AutoSave.Font = Enum.Font.TitilliumWeb
+AutoSave.Text = "Auto Save nil"
+AutoSave.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoSave.TextSize = 14.000
+AutoSave.TextXAlignment = Enum.TextXAlignment.Left
+
+Header.Name = "Header"
+Header.Parent = HeaderButtons
+Header.BackgroundColor3 = Color3.fromRGB(71, 100, 153)
+Header.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Header.BorderSizePixel = 0
+Header.Size = UDim2.new(0, 352, 0, 9)
+
+Title_2.Name = "Title"
+Title_2.Parent = Header
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.BorderSizePixel = 0
+Title_2.Size = UDim2.new(0, 352, 0, 9)
+Title_2.Font = Enum.Font.TitilliumWeb
+Title_2.Text = "Reshade"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 12.000
+Title_2.TextWrapped = true
+
+VectorBarDown.Name = "VectorBarDown"
+VectorBarDown.Parent = Header
+VectorBarDown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VectorBarDown.BackgroundTransparency = 1.000
+VectorBarDown.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VectorBarDown.BorderSizePixel = 0
+VectorBarDown.Size = UDim2.new(0, 9, 0, 9)
+VectorBarDown.Image = "rbxassetid://108771781245020"
+
+Search.Name = "Search"
+Search.Parent = HeaderButtons
+Search.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Search.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Search.BorderSizePixel = 0
+Search.Position = UDim2.new(0.0198863633, 0, 0.0552584678, 0)
+Search.Size = UDim2.new(0, 144, 0, 12)
+Search.ClearTextOnFocus = false
+Search.Font = Enum.Font.TitilliumWeb
+Search.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+Search.PlaceholderText = "Search"
+Search.Text = ""
+Search.TextColor3 = Color3.fromRGB(255, 255, 255)
+Search.TextSize = 14.000
+Search.TextXAlignment = Enum.TextXAlignment.Left
+
+Present.Name = "Present"
+Present.Parent = HeaderButtons
+Present.BackgroundColor3 = Color3.fromRGB(62, 83, 124)
+Present.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Present.BorderSizePixel = 0
+Present.Position = UDim2.new(0.125, 0, 0.0249554366, 0)
+Present.Size = UDim2.new(0, 200, 0, 13)
+Present.Font = Enum.Font.TitilliumWeb
+Present.Text = "Reshade Present"
+Present.TextColor3 = Color3.fromRGB(255, 255, 255)
+Present.TextSize = 14.000
+Present.TextXAlignment = Enum.TextXAlignment.Left
+
+PresentsScrolling.Name = "PresentsScrolling"
+PresentsScrolling.Parent = HeaderButtons
+PresentsScrolling.Active = true
+PresentsScrolling.BackgroundColor3 = Color3.fromRGB(62, 83, 124)
+PresentsScrolling.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PresentsScrolling.BorderSizePixel = 0
+PresentsScrolling.Position = UDim2.new(0.125, 0, 0.0454777218, 0)
+PresentsScrolling.Size = UDim2.new(0, 200, 0, 413)
+PresentsScrolling.Visible = false
+PresentsScrolling.ZIndex = 2
+PresentsScrolling.ScrollBarThickness = 5
+
+UIListLayout_5.Parent = PresentsScrolling
+UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_5.Padding = UDim.new(0, 5)
+
+CloneSave.Name = "CloneSave"
+CloneSave.Parent = PresentsScrolling
+CloneSave.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloneSave.BackgroundTransparency = 1.000
+CloneSave.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CloneSave.BorderSizePixel = 0
+CloneSave.Position = UDim2.new(0, 0, 0.0242130756, 0)
+CloneSave.Size = UDim2.new(0, 200, 0, 17)
+
+SaveExample.Name = "SaveExample"
+SaveExample.Parent = CloneSave
+SaveExample.BackgroundColor3 = Color3.fromRGB(45, 61, 90)
+SaveExample.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SaveExample.BorderSizePixel = 0
+SaveExample.Position = UDim2.new(0, 0, 0.335997641, 0)
+SaveExample.Size = UDim2.new(0, 206, 0, 19)
+SaveExample.Font = Enum.Font.TitilliumWeb
+SaveExample.Text = "Example"
+SaveExample.TextColor3 = Color3.fromRGB(255, 255, 255)
+SaveExample.TextSize = 14.000
+SaveExample.TextXAlignment = Enum.TextXAlignment.Left
+
+Loading.Name = "Loading"
+Loading.Parent = Reshade
+Loading.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Loading.BackgroundTransparency = 0.250
+Loading.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Loading.BorderSizePixel = 0
+Loading.Position = UDim2.new(0.00986842066, 0, 0.010416667, 0)
+Loading.Size = UDim2.new(0, 893, 0, 58)
+Loading.Visible = false
+
+TitleOfShader.Name = "TitleOfShader"
+TitleOfShader.Parent = Loading
+TitleOfShader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleOfShader.BackgroundTransparency = 1.000
+TitleOfShader.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleOfShader.BorderSizePixel = 0
+TitleOfShader.Position = UDim2.new(0.0078387456, 0, 0, 2)
+TitleOfShader.Size = UDim2.new(0, 135, 0, 18)
+TitleOfShader.Font = Enum.Font.TitilliumWeb
+TitleOfShader.Text = "Reshade"
+TitleOfShader.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleOfShader.TextScaled = true
+TitleOfShader.TextSize = 13.000
+TitleOfShader.TextWrapped = true
+TitleOfShader.TextXAlignment = Enum.TextXAlignment.Left
+
+Desc.Name = "Desc"
+Desc.Parent = Loading
+Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Desc.BackgroundTransparency = 1.000
+Desc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Desc.BorderSizePixel = 0
+Desc.Position = UDim2.new(0.0078387456, 0, 0.206896558, 0)
+Desc.Size = UDim2.new(0, 234, 0, 18)
+Desc.Font = Enum.Font.TitilliumWeb
+Desc.Text = "Like this game for news, updates, effects and discussion."
+Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc.TextScaled = true
+Desc.TextSize = 13.000
+Desc.TextWrapped = true
+Desc.TextXAlignment = Enum.TextXAlignment.Left
+
+LoadingAssets.Name = "LoadingAssets"
+LoadingAssets.Parent = Loading
+LoadingAssets.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+LoadingAssets.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LoadingAssets.BorderSizePixel = 0
+LoadingAssets.Position = UDim2.new(0.0078387456, 0, 0.517241359, 0)
+LoadingAssets.Size = UDim2.new(0, 880, 0, 19)
+
+ScreenThing.Name = "ScreenThing"
+ScreenThing.Parent = LoadingAssets
+ScreenThing.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+ScreenThing.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScreenThing.BorderSizePixel = 0
+ScreenThing.Position = UDim2.new(-0.00125215703, 0, -0.00907436199, 0)
+ScreenThing.Size = UDim2.new(0, 423, 0, 19)
+
+DetailsAbout.Name = "DetailsAbout"
+DetailsAbout.Parent = ScreenThing
+DetailsAbout.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DetailsAbout.BackgroundTransparency = 1.000
+DetailsAbout.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DetailsAbout.BorderSizePixel = 0
+DetailsAbout.Size = UDim2.new(0, 422, 0, 19)
+DetailsAbout.Font = Enum.Font.TitilliumWeb
+DetailsAbout.Text = "Compiling (231 effects remaining) ... This might take a while. The application could become unresponsive if some assets got removed."
+DetailsAbout.TextColor3 = Color3.fromRGB(255, 255, 255)
+DetailsAbout.TextScaled = true
+DetailsAbout.TextSize = 13.000
+DetailsAbout.TextWrapped = true
+DetailsAbout.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts:
+
+local function OBAQV_fake_script() -- Reshade.SkySystem 
+	local script = Instance.new('LocalScript', Reshade)
+
+	--// Reshade Sky System (Merged from all Ski scripts)
+	
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	--//////////////////////////////////////////////////////
+	--// SKY CONFIGURATIONS
+	--//////////////////////////////////////////////////////
+	
+	local SkyConfigs = {
+		Winter = {
+			SkyboxDn = "http://www.roblox.com/asset/?id=252763035",
+			SkyboxLf = "http://www.roblox.com/asset/?id=252760980",
+			SkyboxUp = "http://www.roblox.com/asset/?id=252762652",
+			SkyboxRt = "http://www.roblox.com/asset/?id=252760986",
+			SkyboxFt = "http://www.roblox.com/asset/?id=252761439",
+			SkyboxBk = "http://www.roblox.com/asset/?id=252760981",
+			SunAngularSize = 3,
+			MoonAngularSize = 11,
+		},
+		Sunny = {
+			SkyboxDn = "http://www.roblox.com/asset/?id=4745751569",
+			SkyboxLf = "rbxassetid://4745566126",
+			SkyboxUp = "http://www.roblox.com/asset/?id=4745740271",
+			SkyboxRt = "rbxassetid://4745565344",
+			SkyboxFt = "rbxassetid://4745562726",
+			SkyboxBk = "rbxassetid://4745564551",
+			SunAngularSize = 0,
+			MoonAngularSize = 3,
+		},
+		SkylineForSkydiving = {
+			SkyboxDn = "http://www.roblox.com/asset/?id=144931530",
+			SkyboxLf = "http://www.roblox.com/asset/?id=144933244",
+			SkyboxUp = "http://www.roblox.com/asset/?id=144931564",
+			SkyboxRt = "http://www.roblox.com/asset/?id=144933299",
+			SkyboxFt = "http://www.roblox.com/asset/?id=144933262",
+			SkyboxBk = "http://www.roblox.com/asset/?id=144933338",
+			SunAngularSize = 5,
+			MoonAngularSize = 11,
+		},
+		Summer = {
+			SkyboxDn = "rbxassetid://11832301800",
+			SkyboxLf = "rbxassetid://11832301424",
+			SkyboxUp = "rbxassetid://11832308453",
+			SkyboxRt = "rbxassetid://11832301165",
+			SkyboxFt = "rbxassetid://11832301591",
+			SkyboxBk = "rbxassetid://11832302094",
+			SunAngularSize = 5,
+			MoonAngularSize = 0,
+		},
+		Rainy = {
+			SkyboxDn = "http://www.roblox.com/asset/?id=4495864887",
+			SkyboxLf = "http://www.roblox.com/asset/?id=4495866035",
+			SkyboxUp = "http://www.roblox.com/asset/?id=4495867486",
+			SkyboxRt = "http://www.roblox.com/asset/?id=4495866584",
+			SkyboxFt = "http://www.roblox.com/asset/?id=4495865458",
+			SkyboxBk = "http://www.roblox.com/asset/?id=4495864450",
+			SunAngularSize = 4,
+			MoonAngularSize = 1,
+		},
+		Normal = {
+			SkyboxLf = "rbxassetid://11832250090",
+			SkyboxDn = "rbxassetid://11832250656",
+			SkyboxUp = "rbxassetid://11832257515",
+			SkyboxRt = "rbxassetid://11832249798",
+			SkyboxFt = "rbxassetid://11832250915",
+			SkyboxBk = "rbxassetid://11832250366",
+			SunAngularSize = 4,
+			MoonAngularSize = 0,
+		},
+		Foggy = {
+			SkyboxDn = "rbxassetid://16931374530",
+			SkyboxLf = "rbxassetid://16931375189",
+			SkyboxUp = "rbxassetid://16931373555",
+			SkyboxRt = "rbxassetid://16931372874",
+			SkyboxFt = "rbxassetid://16931374146",
+			SkyboxBk = "rbxassetid://16931374839",
+			SunAngularSize = 4,
+			MoonAngularSize = 11,
+		},
+		DarkSky = {
+			SkyboxDn = "rbxassetid://2673262317",
+			SkyboxLf = "rbxassetid://2673262492",
+			SkyboxUp = "rbxassetid://2673262173",
+			SkyboxRt = "rbxassetid://2673262691",
+			SkyboxFt = "rbxassetid://2673262031",
+			SkyboxBk = "rbxassetid://2673261890",
+			SunAngularSize = 1.44,
+			MoonAngularSize = 1.44,
+		},
+	}
+	
+	local ValidFolders = {
+		skies = true,
+		skyboxes = true,
+	}
+	
+	--//////////////////////////////////////////////////////
+	--// WAIT FOR GUI LOAD
+	--//////////////////////////////////////////////////////
+	
+	local playerGui = player:WaitForChild("PlayerGui")
+	local Reshade = playerGui:WaitForChild("Reshade")
+	
+	--//////////////////////////////////////////////////////
+	--// CORE LOGIC
+	--//////////////////////////////////////////////////////
+	
+	local function isValidFolder(folder)
+		return ValidFolders[string.lower(folder.Name)] == true
+	end
+	
+	local function skyExists(folder, skyName)
+		for _, child in ipairs(folder:GetChildren()) do
+			if child:IsA("Sky") and child.Name == skyName then
+				return true
+			end
+		end
+		return false
+	end
+	
+	local function createSky(skyName, skyData)
+		local sky = Instance.new("Sky")
+		sky.Name = skyName
+	
+		sky.SkyboxBk = skyData.SkyboxBk
+		sky.SkyboxDn = skyData.SkyboxDn
+		sky.SkyboxFt = skyData.SkyboxFt
+		sky.SkyboxLf = skyData.SkyboxLf
+		sky.SkyboxRt = skyData.SkyboxRt
+		sky.SkyboxUp = skyData.SkyboxUp
+	
+		sky.SunAngularSize = skyData.SunAngularSize
+		sky.MoonAngularSize = skyData.MoonAngularSize
+	
+		return sky
+	end
+	
+	local function applyAllSkies()
+		for _, obj in ipairs(Reshade:GetDescendants()) do
+			if obj:IsA("Folder") and isValidFolder(obj) then
+				-- Apply all sky configurations to this folder
+				for skyName, skyData in pairs(SkyConfigs) do
+					if not skyExists(obj, skyName) then
+						local sky = createSky(skyName, skyData)
+						sky.Parent = obj
+					end
+				end
+			end
+		end
+	end
+	
+	--//////////////////////////////////////////////////////
+	--// RUN
+	--//////////////////////////////////////////////////////
+	
+	applyAllSkies()
+end
+coroutine.wrap(OBAQV_fake_script)()
+local function ODFJGGV_fake_script() -- Reshade.MenuController 
+	local script = Instance.new('LocalScript', Reshade)
+
+	--// Reshade Menu Controller (Merged from Key, Headerz, and Draggable)
+	
+	local UserInputService = game:GetService("UserInputService")
+	local TweenService = game:GetService("TweenService")
+	
+	local screenGui = script.Parent
+	local menu = screenGui:WaitForChild("Menu")
+	local header = menu:WaitForChild("HeaderButtons")
+	local activeBtn = header:WaitForChild("Activetotop")
+	local searchBox = header:WaitForChild("Search")
+	local scrollingBox = menu:WaitForChild("Effects")
+	
+	--//////////////////////////////////////////////////////
+	--// GUI TOGGLE (Key functionality)
+	--//////////////////////////////////////////////////////
+	
+	local guiEnabled = true
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		if input.KeyCode == Enum.KeyCode.Home then
+			guiEnabled = not guiEnabled
+			screenGui.Enabled = guiEnabled
+		end
+	end)
+	
+	--//////////////////////////////////////////////////////
+	--// DRAGGING (Draggable functionality)
+	--//////////////////////////////////////////////////////
+	
+	local dragToggle = false
+	local dragStart = nil
+	local startPos = nil
+	local dragSpeed = 0.15
+	
+	local function updateDrag(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(
+			startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y
+		)
+		TweenService:Create(menu, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	menu.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragToggle = true
+			dragStart = input.Position
+			startPos = menu.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateDrag(input)
+			end
+		end
+	end)
+	
+	--//////////////////////////////////////////////////////
+	--// SEARCH & ACTIVE TO TOP (Headerz functionality)
+	--//////////////////////////////////////////////////////
+	
+	local activeToTopEnabled = false
+	local originalOrder = {}
+	
+	-- Store original order dynamically
+	local function storeOriginalOrder()
+		for i, frame in ipairs(scrollingBox:GetChildren()) do
+			if frame:IsA("Frame") then
+				originalOrder[frame] = i
+			end
+		end
+	end
+	
+	storeOriginalOrder()
+	
+	-- Update search visibility
+	local function updateSearch()
+		local text = string.lower(searchBox.Text)
+	
+		for _, frame in pairs(scrollingBox:GetChildren()) do
+			if frame:IsA("Frame") then
+				local button = frame:FindFirstChild("Button")
+				local title = button and button:FindFirstChild("FXTitle")
+	
+				if title and title:IsA("TextLabel") then
+					local fxName = string.lower(title.Text)
+	
+					if text == "" then
+						frame.Visible = true
+					else
+						frame.Visible = string.find(fxName, text) ~= nil
+					end
+				else
+					frame.Visible = true
+				end
+			end
+		end
+	end
+	
+	searchBox:GetPropertyChangedSignal("Text"):Connect(updateSearch)
+	
+	-- Update order based on active status
+	local function updateOrder()
+		local activeFrames = {}
+		local inactiveFrames = {}
+	
+		for _, frame in pairs(scrollingBox:GetChildren()) do
+			if frame:IsA("Frame") then
+				local button = frame:FindFirstChild("Button")
+				if button then
+					local check = button:FindFirstChild("Check")
+					if check and check.Visible then
+						table.insert(activeFrames, frame)
+					else
+						table.insert(inactiveFrames, frame)
+					end
+				end
+			end
+		end
+	
+		local index = 1
+	
+		if activeToTopEnabled then
+			for _, frame in ipairs(activeFrames) do
+				frame.LayoutOrder = index
+				index += 1
+			end
+		end
+	
+		for _, frame in ipairs(inactiveFrames) do
+			frame.LayoutOrder = index
+			index += 1
+		end
+	
+		-- Restore original order if disabled
+		if not activeToTopEnabled then
+			for frame, order in pairs(originalOrder) do
+				if frame and frame.Parent then
+					frame.LayoutOrder = order
+				end
+			end
+		end
+	end
+	
+	-- Toggle button click
+	activeBtn.MouseButton1Click:Connect(function()
+		activeToTopEnabled = not activeToTopEnabled
+	
+		-- Visual feedback
+		local goal = {
+			TextColor3 = activeToTopEnabled and Color3.fromRGB(141, 165, 200) or Color3.fromRGB(255, 255, 255)
+		}
+	
+		TweenService:Create(activeBtn, TweenInfo.new(0.2), goal):Play()
+	
+		updateOrder()
+	end)
+	
+	-- Watch for check toggles
+	local function connectCheckListener(frame)
+		local button = frame:FindFirstChild("Button")
+		if button then
+			local check = button:FindFirstChild("Check")
+			if check then
+				check:GetPropertyChangedSignal("Visible"):Connect(function()
+					if activeToTopEnabled then
+						updateOrder()
+					end
+				end)
+			end
+		end
+	end
+	
+	-- Connect to existing frames
+	for _, frame in pairs(scrollingBox:GetChildren()) do
+		if frame:IsA("Frame") then
+			connectCheckListener(frame)
+		end
+	end
+	
+	-- Handle frames added dynamically
+	scrollingBox.ChildAdded:Connect(function(child)
+		if child:IsA("Frame") then
+			-- Update original order tracking
+			local newIndex = 0
+			for _, f in pairs(scrollingBox:GetChildren()) do
+				if f:IsA("Frame") then
+					newIndex += 1
+				end
+			end
+			originalOrder[child] = newIndex
+			
+			connectCheckListener(child)
+		end
+	end)
+end
+coroutine.wrap(ODFJGGV_fake_script)()
+local function SEXZV_fake_script() -- Reshade.OpenaiSavePresentz 
+	local script = Instance.new('LocalScript', Reshade)
+
+	local Lighting = game:GetService("Lighting")
+	
+	local gui = script.Parent
+	local menu = gui:WaitForChild("Menu")
+	
+	-- Header buttons
+	local header = menu:WaitForChild("HeaderButtons")
+	local saveBtn = header:WaitForChild("SaveSettings")
+	local presentBtn = header:WaitForChild("Present")
+	local createBtn = header:WaitForChild("CreateNewPresent")
+	local autoSaveBtn = header:WaitForChild("AutoSave")
+	local undoBtn = header:WaitForChild("Undo")
+	local redoBtn = header:WaitForChild("Redo")
+	
+	local presentsScrolling = header:WaitForChild("PresentsScrolling")
+	local cloneTemplate = presentsScrolling:WaitForChild("CloneSave")
+	
+	-- Effects + Lighting
+	local effectsFrame = menu:WaitForChild("Effects")
+	local lightingConfig = menu.AdjustSettings:WaitForChild("LightingConfig")
+	
+	-- STATE
+	local saveIndex = 0
+	local autoSave = false
+	
+	local history = {}
+	local redoStack = {}
+	
+	--------------------------------------------------
+	-- 🔧 HELPER: GET CURRENT SETTINGS
+	--------------------------------------------------
+	local function getCurrentSettings()
+		local data = {}
+	
+		-- Lighting properties
+		data.Lighting = {
+			Brightness = Lighting.Brightness,
+			Ambient = Lighting.Ambient,
+			OutdoorAmbient = Lighting.OutdoorAmbient,
+			EnvironmentDiffuseScale = Lighting.EnvironmentDiffuseScale,
+			EnvironmentSpecularScale = Lighting.EnvironmentSpecularScale,
+			ColorShift_Bottom = Lighting.ColorShift_Bottom,
+			ColorShift_Top = Lighting.ColorShift_Top,
+			GlobalShadows = Lighting.GlobalShadows
+		}
+	
+		-- Sky
+		local sky = Lighting:FindFirstChildOfClass("Sky")
+		if sky then
+			data.Sky = sky:Clone()
+		end
+	
+		-- Toggles (Check.Visible)
+		data.Toggles = {}
+	
+		for _, fx in pairs(effectsFrame:GetDescendants()) do
+			if fx.Name == "Check" then
+				data.Toggles[fx.Parent.Name] = fx.Visible
+			end
+		end
+	
+		return data
+	end
+	
+	--------------------------------------------------
+	-- 🔧 APPLY SETTINGS
+	--------------------------------------------------
+	local function applySettings(data)
+		if not data then return end
+	
+		local l = data.Lighting
+		if l then
+			Lighting.Brightness = l.Brightness
+			Lighting.Ambient = l.Ambient
+			Lighting.OutdoorAmbient = l.OutdoorAmbient
+			Lighting.EnvironmentDiffuseScale = l.EnvironmentDiffuseScale
+			Lighting.EnvironmentSpecularScale = l.EnvironmentSpecularScale
+			Lighting.ColorShift_Bottom = l.ColorShift_Bottom
+			Lighting.ColorShift_Top = l.ColorShift_Top
+			Lighting.GlobalShadows = l.GlobalShadows
+		end
+	
+		-- Apply Sky
+		if data.Sky then
+			local oldSky = Lighting:FindFirstChildOfClass("Sky")
+			if oldSky then oldSky:Destroy() end
+	
+			local newSky = data.Sky:Clone()
+			newSky.Parent = Lighting
+		end
+	
+		-- Apply toggles
+		for _, fx in pairs(effectsFrame:GetDescendants()) do
+			if fx.Name == "Check" then
+				local state = data.Toggles[fx.Parent.Name]
+				if state ~= nil then
+					fx.Visible = state
+				end
+			end
+		end
+	end
+	
+	--------------------------------------------------
+	-- 📦 SAVE PRESET UI + DATA
+	--------------------------------------------------
+	local function createPreset(name, data)
+		local clone = cloneTemplate:Clone()
+		clone.Visible = true
+		clone.Name = name
+		clone.Parent = presentsScrolling
+	
+		local button = clone:FindFirstChildOfClass("TextButton")
+		if button then
+			button.Text = name
+	
+			button.MouseButton1Click:Connect(function()
+				applySettings(data)
+			end)
+		end
+	end
+	
+	--------------------------------------------------
+	-- 💾 SAVE BUTTON
+	--------------------------------------------------
+	saveBtn.MouseButton1Click:Connect(function()
+		saveIndex += 1
+	
+		local data = getCurrentSettings()
+	
+		table.insert(history, data)
+		redoStack = {}
+	
+		local name = "SavePresent#" .. saveIndex
+		createPreset(name, data)
+	end)
+	
+	--------------------------------------------------
+	-- 📂 PRESENT TOGGLE
+	--------------------------------------------------
+	presentBtn.MouseButton1Click:Connect(function()
+		presentsScrolling.Visible = not presentsScrolling.Visible
+	end)
+	
+	--------------------------------------------------
+	-- ♻️ CREATE NEW PRESET (RESET)
+	--------------------------------------------------
+	createBtn.MouseButton1Click:Connect(function()
+		local current = getCurrentSettings()
+	
+		if autoSave then
+			saveIndex += 1
+			createPreset("AutoSavePresent#" .. saveIndex, current)
+		end
+	
+		-- Reset lighting
+		Lighting.Brightness = 1
+		Lighting.Ambient = Color3.new(0,0,0)
+		Lighting.OutdoorAmbient = Color3.new(0,0,0)
+		Lighting.EnvironmentDiffuseScale = 0
+		Lighting.EnvironmentSpecularScale = 0
+		Lighting.ColorShift_Bottom = Color3.new(0,0,0)
+		Lighting.ColorShift_Top = Color3.new(0,0,0)
+		Lighting.GlobalShadows = true
+	
+		-- Remove sky
+		local sky = Lighting:FindFirstChildOfClass("Sky")
+		if sky then sky:Destroy() end
+	
+		-- Reset toggles
+		for _, fx in pairs(effectsFrame:GetDescendants()) do
+			if fx.Name == "Check" then
+				fx.Visible = false
+			end
+		end
+	end)
+	
+	--------------------------------------------------
+	-- 🔄 AUTOSAVE TOGGLE
+	--------------------------------------------------
+	autoSaveBtn.MouseButton1Click:Connect(function()
+		autoSave = not autoSave
+	
+		-- visual feedback (optional)
+		if autoSave then
+			autoSaveBtn.Text = "Auto Save on"
+		else
+			autoSaveBtn.Text = "Auto Save off"
+		end
+	end)
+	
+	--------------------------------------------------
+	-- ↩️ UNDO
+	--------------------------------------------------
+	undoBtn.MouseButton1Click:Connect(function()
+		if #history <= 1 then return end
+	
+		local last = table.remove(history)
+		table.insert(redoStack, last)
+	
+		local previous = history[#history]
+		applySettings(previous)
+	end)
+	
+	--------------------------------------------------
+	-- ↪️ REDO
+	--------------------------------------------------
+	redoBtn.MouseButton1Click:Connect(function()
+		if #redoStack == 0 then return end
+	
+		local data = table.remove(redoStack)
+		table.insert(history, data)
+	
+		applySettings(data)
+	end)
+end
+coroutine.wrap(SEXZV_fake_script)()
+local function QMGUDLW_fake_script() -- Button.HoverButton 
+	local script = Instance.new('LocalScript', Button)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(QMGUDLW_fake_script)()
+local function YMLUB_fake_script() -- Button_2.HoverButton 
+	local script = Instance.new('LocalScript', Button_2)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local Lighting = game:GetService("Lighting")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- UI Path (SAFE)
+	local screenGui = button:FindFirstAncestor("Reshade")
+	if not screenGui then return end
+	
+	local menu = screenGui:WaitForChild("Menu")
+	local adjustSettings = menu:WaitForChild("AdjustSettings")
+	local scrollingFrame = adjustSettings:WaitForChild("NotSkybox")
+	
+	-- Sky folder
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skyboxes")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	
+	-- Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Storage
+	local activeSkies = {}
+	local originalSkies = {}
+	local cached = false
+	
+	-- Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Cache ONLY ONCE
+	local function cacheOriginalSkies()
+		if cached then return end
+		cached = true
+	
+		originalSkies = {}
+	
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				table.insert(originalSkies, obj)
+			end
+		end
+	end
+	
+	-- Apply
+	local function applySkyboxes()
+		cacheOriginalSkies()
+	
+		-- Remove originals safely
+		for _, obj in ipairs(originalSkies) do
+			if obj and obj.Parent == Lighting then
+				obj.Parent = nil
+			end
+		end
+	
+		-- Add new skies
+		activeSkies = {}
+		for _, sky in ipairs(skyFolder:GetChildren()) do
+			if sky:IsA("Sky") then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+				table.insert(activeSkies, clone)
+			end
+		end
+	end
+	
+	-- Remove
+	local function removeSkyboxes()
+		-- Remove ONLY our skies
+		for _, sky in ipairs(activeSkies) do
+			if sky and sky.Parent then
+				sky:Destroy()
+			end
+		end
+		activeSkies = {}
+	
+		-- Restore originals
+		for _, sky in ipairs(originalSkies) do
+			if sky and sky.Parent == nil then
+				sky.Parent = Lighting
+			end
+		end
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- Toggle
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			tweenTo(hoverColor)
+			check.Visible = true
+			scrollingFrame.Visible = true
+			applySkyboxes()
+		else
+			tweenTo(originalColor)
+			check.Visible = false
+			scrollingFrame.Visible = false
+			removeSkyboxes()
+		end
+	end)
+end
+coroutine.wrap(YMLUB_fake_script)()
+local function VUMOQED_fake_script() -- Button_3.HoverButton 
+	local script = Instance.new('LocalScript', Button_3)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- UI Path (SAFE)
+	local screenGui = button:FindFirstAncestor("Reshade")
+	if not screenGui then return end
+	
+	local menu = screenGui:WaitForChild("Menu")
+	local adjustSettings = menu:WaitForChild("AdjustSettings")
+	local scrollingFrame = adjustSettings:WaitForChild("LightingConfig")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	
+	-- Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- Toggle
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			tweenTo(hoverColor)
+			check.Visible = true
+			scrollingFrame.Visible = true
+		else
+			tweenTo(originalColor)
+			check.Visible = false
+			scrollingFrame.Visible = false
+		end
+	end)
+end
+coroutine.wrap(VUMOQED_fake_script)()
+local function DGXK_fake_script() -- Button_4.HoverButton 
+	local script = Instance.new('LocalScript', Button_4)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local Workspace = game:GetService("Workspace")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Store only modified parts
+	local modifiedParts = {}
+	
+	-- Check if part is inside a character
+	local function isCharacterPart(part)
+		local model = part:FindFirstAncestorOfClass("Model")
+		if model and model:FindFirstChildOfClass("Humanoid") then
+			return true
+		end
+		return false
+	end
+	
+	-- Tween UI
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- APPLY REFLECTION
+	local function applyReflection()
+		for _, obj in ipairs(Workspace:GetDescendants()) do
+			if obj:IsA("BasePart") then
+	
+				-- ❌ Skip character body parts entirely
+				if isCharacterPart(obj) then
+					continue
+				end
+	
+				-- ❌ Skip anything already reflective (game-made reflections or custom)
+				if obj.Reflectance ~= 0 then
+					continue
+				end
+	
+				-- Store original only once
+				if modifiedParts[obj] == nil then
+					modifiedParts[obj] = obj.Reflectance
+				end
+	
+				obj.Reflectance = 0.1
+			end
+		end
+	end
+	
+	-- RESTORE ONLY MODIFIED
+	local function removeReflection()
+		for part, original in pairs(modifiedParts) do
+			if part and part.Parent then
+				part.Reflectance = original
+			end
+		end
+	
+		table.clear(modifiedParts)
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- Toggle
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			tweenTo(hoverColor)
+			check.Visible = true
+			applyReflection()
+		else
+			tweenTo(originalColor)
+			check.Visible = false
+			removeReflection()
+		end
+	end)
+end
+coroutine.wrap(DGXK_fake_script)()
+local function HJQNB_fake_script() -- Button_5.HoverButton 
+	local script = Instance.new('LocalScript', Button_5)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	--// Motion Blur Setup
+	local BlurAmount = 10
+	local Camera = Workspace.CurrentCamera
+	local Last = Camera.CFrame.LookVector
+	
+	local Blur = Instance.new("BlurEffect")
+	Blur.Size = 0
+	Blur.Parent = Camera
+	
+	local BlurEnabled = false
+	
+	-- Camera change fix
+	Workspace:GetPropertyChangedSignal("CurrentCamera"):Connect(function()
+		Camera = Workspace.CurrentCamera
+	
+		if not Blur or Blur.Parent == nil then
+			Blur = Instance.new("BlurEffect")
+		end
+	
+		Blur.Parent = Camera
+		Last = Camera.CFrame.LookVector
+	end)
+	
+	-- Motion blur loop
+	RunService.Heartbeat:Connect(function()
+		if not Camera then return end
+	
+		if BlurEnabled then
+			if not Blur or Blur.Parent == nil then
+				Blur = Instance.new("BlurEffect")
+				Blur.Parent = Camera
+			end
+	
+			local magnitude = (Camera.CFrame.LookVector - Last).Magnitude
+			Blur.Size = math.abs(magnitude) * BlurAmount
+		else
+			if Blur then
+				Blur.Size = 0
+			end
+		end
+	
+		Last = Camera.CFrame.LookVector
+	end)
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		if button.BackgroundColor3 == hoverColor then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+		BlurEnabled = toggled
+	
+		if toggled then
+			-- ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(HJQNB_fake_script)()
+local function PDFOY_fake_script() -- Button_6.HoverButton 
+	local script = Instance.new('LocalScript', Button_6)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local Lighting = game:GetService("Lighting")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Store effects
+	local effects = {}
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Create Tonemap Effects
+	local function createEffects()
+		-- Prevent duplicates
+		if #effects > 0 then return end
+	
+		local bloom = Instance.new("BloomEffect")
+		bloom.Name = "ToneMapBloom"
+		bloom.Intensity = 0.95
+		bloom.Size = 18
+		bloom.Threshold = 1.917
+		bloom.Parent = Lighting
+	
+		local blur = Instance.new("BlurEffect")
+		blur.Name = "TonemapBlur"
+		blur.Size = 3
+		blur.Parent = Lighting
+	
+		local color = Instance.new("ColorCorrectionEffect")
+		color.Name = "ColorTonemap"
+		color.Brightness = -0.1
+		color.Contrast = 0.1
+		color.TintColor = Color3.fromRGB(253, 255, 239)
+		color.Parent = Lighting
+	
+		local dof = Instance.new("DepthOfFieldEffect")
+		dof.Name = "TonemapDepth"
+		dof.FarIntensity = 0.085
+		dof.InFocusDistance = 7.04
+		dof.InFocusRadius = 1.76
+		dof.NearIntensity = 0.332
+		dof.Parent = Lighting
+	
+		local sun = Instance.new("SunRaysEffect")
+		sun.Name = "SunTonemap"
+		sun.Intensity = 0.183
+		sun.Spread = 1
+		sun.Parent = Lighting
+	
+		effects = {bloom, blur, color, dof, sun}
+	end
+	
+	-- Remove Tonemap Effects
+	local function removeEffects()
+		for _, effect in ipairs(effects) do
+			if effect and effect.Parent then
+				effect:Destroy()
+			end
+		end
+		effects = {}
+	
+		-- Extra safety: remove any leftover by name
+		for _, v in ipairs(Lighting:GetChildren()) do
+			if v.Name == "ToneMapBloom"
+				or v.Name == "TonemapBlur"
+				or v.Name == "ColorTonemap"
+				or v.Name == "TonemapDepth"
+				or v.Name == "SunTonemap" then
+				v:Destroy()
+			end
+		end
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		if button.BackgroundColor3 == hoverColor then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- ON
+			tweenTo(hoverColor)
+			check.Visible = true
+			createEffects()
+		else
+			-- OFF
+			tweenTo(originalColor)
+			check.Visible = false
+			removeEffects()
+		end
+	end)
+end
+coroutine.wrap(PDFOY_fake_script)()
+local function WJPW_fake_script() -- Button_7.HoverButton 
+	local script = Instance.new('LocalScript', Button_7)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local Lighting = game:GetService("Lighting")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Store effects
+	local effects = {}
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Create Effects
+	local function createEffects()
+		-- Prevent duplicates
+		if #effects > 0 then return end
+	
+		local atmosphere = Instance.new("Atmosphere")
+		atmosphere.Name = "AdaptiveFogFromFX"
+		atmosphere.Density = 0.5
+		atmosphere.Parent = Lighting
+		effects = {atmosphere}
+	end
+	
+	-- Remove Effects
+	local function removeEffects()
+		for _, effect in ipairs(effects) do
+			if effect and effect.Parent then
+				effect:Destroy()
+			end
+		end
+		effects = {}
+	
+		-- Extra safety: remove any leftover by name
+		for _, v in ipairs(Lighting:GetChildren()) do
+			if v.Name == "AdaptiveFogFromFX"
+				or v.Name == "BlackAssNigga" then
+				v:Destroy()
+			end
+		end
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		if button.BackgroundColor3 == hoverColor then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- ON
+			tweenTo(hoverColor)
+			check.Visible = true
+			createEffects()
+		else
+			-- OFF
+			tweenTo(originalColor)
+			check.Visible = false
+			removeEffects()
+		end
+	end)
+end
+coroutine.wrap(WJPW_fake_script)()
+local function GWETXC_fake_script() -- Button_8.HoverButton 
+	local script = Instance.new('LocalScript', Button_8)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(GWETXC_fake_script)()
+local function ZVJPWQ_fake_script() -- Button_9.HoverButton 
+	local script = Instance.new('LocalScript', Button_9)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local Workspace = game:GetService("Workspace")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Store original states
+	local originalStates = {}
+	local glassHighlights = {}
+	
+	-- Tween function
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Get all glass parts
+	local function getGlassParts()
+		local list = {}
+		for _, obj in ipairs(Workspace:GetDescendants()) do
+			if (obj:IsA("BasePart") or obj:IsA("MeshPart")) and obj.Material == Enum.Material.Glass then
+				table.insert(list, obj)
+			end
+		end
+		return list
+	end
+	
+	-- Enable glass effect
+	local function enableGlass()
+		for _, part in ipairs(getGlassParts()) do
+			if not originalStates[part] then
+				originalStates[part] = {
+					Transparency = part.Transparency
+				}
+			end
+	
+			-- Set transparency (max is 1)
+			part.Transparency = 100
+	
+			-- Highlight
+			local highlight = Instance.new("Highlight")
+			highlight.Name = "GlassDistortion"
+			highlight.FillTransparency = 100
+			highlight.OutlineTransparency = 100
+			highlight.Enabled = true
+			highlight.Adornee = part
+			highlight.Parent = part
+	
+			glassHighlights[part] = highlight
+		end
+	end
+	
+	-- Disable glass effect
+	local function disableGlass()
+		for part, data in pairs(originalStates) do
+			if part and part.Parent then
+				part.Transparency = data.Transparency
+			end
+		end
+	
+		for part, highlight in pairs(glassHighlights) do
+			if highlight then
+				highlight:Destroy()
+			end
+		end
+	
+		originalStates = {}
+		glassHighlights = {}
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		if button.BackgroundColor3 == hoverColor then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- Click toggle
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			tweenTo(hoverColor)
+			check.Visible = true
+			enableGlass()
+		else
+			tweenTo(originalColor)
+			check.Visible = false
+			disableGlass()
+		end
+	end)
+end
+coroutine.wrap(ZVJPWQ_fake_script)()
+local function LUUJQ_fake_script() -- button.HoverButton 
+	local script = Instance.new('LocalScript', button)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Terrain
+	local Terrain = workspace:WaitForChild("Terrain")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- ☁️ CREATE CLOUDS
+	local function createClouds()
+		-- prevent duplicates
+		if Terrain:FindFirstChild("CustomCloudz") then return end
+	
+		local clouds = Instance.new("Clouds")
+		clouds.Name = "CustomCloudz"
+		clouds.Cover = 0.712
+		clouds.Density = 0.519
+		clouds.Color = Color3.fromRGB(234, 234, 234)
+		clouds.Parent = Terrain
+	end
+	
+	-- ☁️ REMOVE CLOUDS
+	local function removeClouds()
+		local clouds = Terrain:FindFirstChild("CustomCloudz")
+		if clouds then
+			clouds:Destroy()
+		end
+	end
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "CustomSky" then
+				sky:Destroy()
+			end
+		end
+	
+		local CustomSkySky = skyFolder:FindFirstChild("CustomSky")
+		if CustomSkySky and CustomSkySky:IsA("Sky") then
+			local clone = CustomSkySky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'CustomSky' sky found in Skies folder!")
+		end
+	
+		-- ☁️ ADD CLOUDS
+		createClouds()
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		savedOnce = false
+	
+		-- ☁️ REMOVE CLOUDS
+		removeClouds()
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			tweenTo(hoverColor)
+			check.Visible = true
+			enableSky()
+		else
+			tweenTo(originalColor)
+			check.Visible = false
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(LUUJQ_fake_script)()
+local function ONLOS_fake_script() -- button_2.HoverButton 
+	local script = Instance.new('LocalScript', button_2)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false -- prevents overwriting backup
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		-- ✅ Save only ONCE per toggle cycle
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		-- ✅ Remove ALL skies that match folder skies
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		-- 🔥 FORCE REMOVE ANY "DarkSky" (100% guaranteed)
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "DarkSky" then
+				sky:Destroy()
+			end
+		end
+	
+		-- ✅ Insert YOUR DarkSky
+		local DarkSkySky = skyFolder:FindFirstChild("DarkSky")
+		if DarkSkySky and DarkSkySky:IsA("Sky") then
+			local clone = DarkSkySky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'DarkSky' sky found in Skies folder!")
+		end
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		-- Remove all current skies
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		-- Restore originals safely
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		-- Reset backup state
+		savedOnce = false
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- UI ON
+			tweenTo(hoverColor)
+			check.Visible = true
+	
+			enableSky()
+		else
+			-- UI OFF
+			tweenTo(originalColor)
+			check.Visible = false
+	
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(ONLOS_fake_script)()
+local function EJMT_fake_script() -- Button_10.HoverButton 
+	local script = Instance.new('LocalScript', Button_10)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false -- prevents overwriting backup
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		-- ✅ Save only ONCE per toggle cycle
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		-- ✅ Remove ALL skies that match folder skies
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		-- 🔥 FORCE REMOVE ANY "Foggy" (100% guaranteed)
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "Foggy" then
+				sky:Destroy()
+			end
+		end
+	
+		-- ✅ Insert YOUR Foggy
+		local FoggySky = skyFolder:FindFirstChild("Foggy")
+		if FoggySky and FoggySky:IsA("Sky") then
+			local clone = FoggySky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'Foggy' sky found in Skies folder!")
+		end
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		-- Remove all current skies
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		-- Restore originals safely
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		-- Reset backup state
+		savedOnce = false
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- UI ON
+			tweenTo(hoverColor)
+			check.Visible = true
+	
+			enableSky()
+		else
+			-- UI OFF
+			tweenTo(originalColor)
+			check.Visible = false
+	
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(EJMT_fake_script)()
+local function XREH_fake_script() -- Button_11.HoverButton 
+	local script = Instance.new('LocalScript', Button_11)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false -- prevents overwriting backup
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		-- ✅ Save only ONCE per toggle cycle
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		-- ✅ Remove ALL skies that match folder skies
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		-- 🔥 FORCE REMOVE ANY "Normal" (100% guaranteed)
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "Normal" then
+				sky:Destroy()
+			end
+		end
+	
+		-- ✅ Insert YOUR Normal
+		local normalSky = skyFolder:FindFirstChild("Normal")
+		if normalSky and normalSky:IsA("Sky") then
+			local clone = normalSky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'Normal' sky found in Skies folder!")
+		end
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		-- Remove all current skies
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		-- Restore originals safely
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		-- Reset backup state
+		savedOnce = false
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- UI ON
+			tweenTo(hoverColor)
+			check.Visible = true
+	
+			enableSky()
+		else
+			-- UI OFF
+			tweenTo(originalColor)
+			check.Visible = false
+	
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(XREH_fake_script)()
+local function XSLRBMC_fake_script() -- Button_12.HoverButton 
+	local script = Instance.new('LocalScript', Button_12)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false -- prevents overwriting backup
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		-- ✅ Save only ONCE per toggle cycle
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		-- ✅ Remove ALL skies that match folder skies
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		-- 🔥 FORCE REMOVE ANY "" (100% guaranteed)
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "Rainy" then
+				sky:Destroy()
+			end
+		end
+	
+		-- ✅ Insert YOUR Rainy
+		local RainySky = skyFolder:FindFirstChild("Rainy")
+		if RainySky and RainySky:IsA("Sky") then
+			local clone = RainySky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'Rainy' sky found in Skies folder!")
+		end
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		-- Remove all current skies
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		-- Restore originals safely
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		-- Reset backup state
+		savedOnce = false
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- UI ON
+			tweenTo(hoverColor)
+			check.Visible = true
+	
+			enableSky()
+		else
+			-- UI OFF
+			tweenTo(originalColor)
+			check.Visible = false
+	
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(XSLRBMC_fake_script)()
+local function XYOKJT_fake_script() -- Button_13.HoverButton 
+	local script = Instance.new('LocalScript', Button_13)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false -- prevents overwriting backup
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		-- ✅ Save only ONCE per toggle cycle
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		-- ✅ Remove ALL skies that match folder skies
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		-- 🔥 FORCE REMOVE ANY "" (100% guaranteed)
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "SkylineForSkydiving" then
+				sky:Destroy()
+			end
+		end
+	
+		-- ✅ Insert YOUR SkylineForSkydiving
+		local SkylineForSkydivingSky = skyFolder:FindFirstChild("SkylineForSkydiving")
+		if SkylineForSkydivingSky and SkylineForSkydivingSky:IsA("Sky") then
+			local clone = SkylineForSkydivingSky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'SkylineForSkydiving' sky found in Skies folder!")
+		end
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		-- Remove all current skies
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		-- Restore originals safely
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		-- Reset backup state
+		savedOnce = false
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- UI ON
+			tweenTo(hoverColor)
+			check.Visible = true
+	
+			enableSky()
+		else
+			-- UI OFF
+			tweenTo(originalColor)
+			check.Visible = false
+	
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(XYOKJT_fake_script)()
+local function KQBM_fake_script() -- Button_14.HoverButton 
+	local script = Instance.new('LocalScript', Button_14)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false -- prevents overwriting backup
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		-- ✅ Save only ONCE per toggle cycle
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		-- ✅ Remove ALL skies that match folder skies
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		-- 🔥 FORCE REMOVE ANY "" (100% guaranteed)
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "Summer" then
+				sky:Destroy()
+			end
+		end
+	
+		-- ✅ Insert YOUR Summer
+		local SummerSky = skyFolder:FindFirstChild("Summer")
+		if SummerSky and SummerSky:IsA("Sky") then
+			local clone = SummerSky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'Summer' sky found in Skies folder!")
+		end
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		-- Remove all current skies
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		-- Restore originals safely
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		-- Reset backup state
+		savedOnce = false
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- UI ON
+			tweenTo(hoverColor)
+			check.Visible = true
+	
+			enableSky()
+		else
+			-- UI OFF
+			tweenTo(originalColor)
+			check.Visible = false
+	
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(KQBM_fake_script)()
+local function EUZNAF_fake_script() -- Button_15.HoverButton 
+	local script = Instance.new('LocalScript', Button_15)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false -- prevents overwriting backup
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		-- ✅ Save only ONCE per toggle cycle
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		-- ✅ Remove ALL skies that match folder skies
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		-- 🔥 FORCE REMOVE ANY "" (100% guaranteed)
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "Sunny" then
+				sky:Destroy()
+			end
+		end
+	
+		-- ✅ Insert YOUR Sunny
+		local SunnySky = skyFolder:FindFirstChild("Sunny")
+		if SunnySky and SunnySky:IsA("Sky") then
+			local clone = SunnySky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'Sunny' sky found in Skies folder!")
+		end
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		-- Remove all current skies
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		-- Restore originals safely
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		-- Reset backup state
+		savedOnce = false
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- UI ON
+			tweenTo(hoverColor)
+			check.Visible = true
+	
+			enableSky()
+		else
+			-- UI OFF
+			tweenTo(originalColor)
+			check.Visible = false
+	
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(EUZNAF_fake_script)()
+local function EZEIMST_fake_script() -- Button_16.HoverButton 
+	local script = Instance.new('LocalScript', Button_16)
+
+	local button = script.Parent
+	local frame = button.Parent
+	local skyFolder = frame:WaitForChild("Skies")
+	
+	local Lighting = game:GetService("Lighting")
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- 🎨 Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local originalColor = button.BackgroundColor3
+	
+	-- 🎞 Tween
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- 🔘 State
+	local toggled = false
+	local originalSkies = {}
+	local savedOnce = false -- prevents overwriting backup
+	
+	-- 🔹 Tween helper
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- 🔹 Get textures
+	local function getSkyTextures(sky)
+		return {
+			sky.SkyboxBk,
+			sky.SkyboxDn,
+			sky.SkyboxFt,
+			sky.SkyboxLf,
+			sky.SkyboxRt,
+			sky.SkyboxUp
+		}
+	end
+	
+	-- 🔹 Compare textures safely
+	local function texturesMatch(sky1, sky2)
+		local t1 = getSkyTextures(sky1)
+		local t2 = getSkyTextures(sky2)
+	
+		for i = 1, 6 do
+			if t1[i] ~= t2[i] then
+				return false
+			end
+		end
+	
+		return true
+	end
+	
+	-- 🖱 Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- 🖱 Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- 🌌 ENABLE SKY
+	local function enableSky()
+		-- ✅ Save only ONCE per toggle cycle
+		if not savedOnce then
+			originalSkies = {}
+	
+			for _, obj in ipairs(Lighting:GetChildren()) do
+				if obj:IsA("Sky") then
+					table.insert(originalSkies, obj:Clone())
+				end
+			end
+	
+			savedOnce = true
+		end
+	
+		-- ✅ Remove ALL skies that match folder skies
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") then
+				for _, folderSky in ipairs(skyFolder:GetChildren()) do
+					if folderSky:IsA("Sky") then
+						if sky.Name == folderSky.Name or texturesMatch(sky, folderSky) then
+							sky:Destroy()
+							break
+						end
+					end
+				end
+			end
+		end
+	
+		-- 🔥 FORCE REMOVE ANY "" (100% guaranteed)
+		for _, sky in ipairs(Lighting:GetChildren()) do
+			if sky:IsA("Sky") and sky.Name == "Winter" then
+				sky:Destroy()
+			end
+		end
+	
+		-- ✅ Insert YOUR Winter
+		local WinterSky = skyFolder:FindFirstChild("Winter")
+		if WinterSky and WinterSky:IsA("Sky") then
+			local clone = WinterSky:Clone()
+			clone.Parent = Lighting
+		else
+			warn("No 'Winter' sky found in Skies folder!")
+		end
+	end
+	
+	-- 🌤 DISABLE SKY
+	local function disableSky()
+		-- Remove all current skies
+		for _, obj in ipairs(Lighting:GetChildren()) do
+			if obj:IsA("Sky") then
+				obj:Destroy()
+			end
+		end
+	
+		-- Restore originals safely
+		for _, sky in ipairs(originalSkies) do
+			if sky then
+				local clone = sky:Clone()
+				clone.Parent = Lighting
+			end
+		end
+	
+		-- Reset backup state
+		savedOnce = false
+	end
+	
+	-- 🔘 CLICK
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- UI ON
+			tweenTo(hoverColor)
+			check.Visible = true
+	
+			enableSky()
+		else
+			-- UI OFF
+			tweenTo(originalColor)
+			check.Visible = false
+	
+			disableSky()
+		end
+	end)
+end
+coroutine.wrap(EZEIMST_fake_script)()
+local function XENFFIS_fake_script() -- DaCode.HoverButton 
+	local script = Instance.new('LocalScript', DaCode)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(XENFFIS_fake_script)()
+local function IRYMFX_fake_script() -- DaCode.LocalScript 
+	local script = Instance.new('LocalScript', DaCode)
+
+	local textBox = script.Parent
+	local Lighting = game:GetService("Lighting")
+	
+	-- UI path
+	local ui = textBox:FindFirstAncestor("LightingConfig")
+	local colorFrame = ui
+		:WaitForChild("Ambien")
+		:WaitForChild("ColorOfAmbient")
+	
+	local originalAmbient = Lighting.Ambient
+	
+	local function clamp(n)
+		return math.clamp(n, 0, 255)
+	end
+	
+	local function parseColor(text)
+		text = text:gsub("%s+", "") -- remove spaces
+	
+		-- 🔥 CASE 1: single number (e.g. "1", "12", "255")
+		if text:match("^%d+$") then
+			local n = tonumber(text)
+			n = clamp(n)
+	
+			local value = tonumber(tostring(n) .. tostring(n) .. tostring(n))
+			-- fallback safety if concatenation becomes weird
+			if not value then
+				value = n
+			end
+	
+			return Color3.fromRGB(n, n, n)
+		end
+	
+		-- 🔥 CASE 2: RGB (255,255,255)
+		local r, g, b = text:match("(%d+),(%d+),(%d+)")
+		if r and g and b then
+			r, g, b = clamp(tonumber(r)), clamp(tonumber(g)), clamp(tonumber(b))
+			return Color3.fromRGB(r, g, b)
+		end
+	
+		-- 🔥 CASE 3: HEX (#FFFFFF)
+		if text:sub(1,1) == "#" and #text == 7 then
+			local ok, color = pcall(function()
+				return Color3.fromHex(text)
+			end)
+			if ok then
+				return color
+			end
+		end
+	
+		return nil
+	end
+	
+	local function applyColor(color)
+		Lighting.Ambient = color
+	
+		if colorFrame then
+			colorFrame.BackgroundColor3 = color
+		end
+	end
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed then return end
+	
+		local input = textBox.Text:lower()
+	
+		if input == "reset" then
+			Lighting.Ambient = originalAmbient
+			if colorFrame then
+				colorFrame.BackgroundColor3 = originalAmbient
+			end
+			return
+		end
+	
+		local color = parseColor(textBox.Text)
+	
+		if color then
+			applyColor(color)
+		else
+			warn("Invalid input")
+		end
+	end)
+end
+coroutine.wrap(IRYMFX_fake_script)()
+local function WJDWUWN_fake_script() -- DaCode_2.HoverButton 
+	local script = Instance.new('LocalScript', DaCode_2)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(WJDWUWN_fake_script)()
+local function MRXZSA_fake_script() -- DaCode_2.LocalScript 
+	local script = Instance.new('LocalScript', DaCode_2)
+
+	local textBox = script.Parent
+	local Lighting = game:GetService("Lighting")
+	
+	-- UI path
+	local ui = textBox:FindFirstAncestor("LightingConfig")
+	local colorFrame = ui
+		:WaitForChild("Brig")
+		:WaitForChild("ColorOfBright")
+	
+	local originalBrightness = Lighting.Brightness
+	
+	local function clampBrightness(n)
+		return math.clamp(n, 0, 10)
+	end
+	
+	local function parseBrightness(text)
+		text = text:gsub("%s+", "")
+	
+		-- 🔥 CASE 1: single number (e.g. "1", "12")
+		if text:match("^%d+$") then
+			local n = tonumber(text)
+	
+			-- turn "12" → "1.2", "1" → "1.1"
+			local formatted = tonumber(n .. "." .. n)
+	
+			if not formatted then
+				formatted = n
+			end
+	
+			return clampBrightness(formatted)
+		end
+	
+		-- 🔥 CASE 2: decimal input ("1.5")
+		local decimal = tonumber(text)
+		if decimal then
+			return clampBrightness(decimal)
+		end
+	
+		return nil
+	end
+	
+	local function applyBrightness(value)
+		Lighting.Brightness = value
+	
+		-- make UI preview grayscale based on brightness
+		local gray = value / 2
+		local previewColor = Color3.new(gray, gray, gray)
+	
+		if colorFrame then
+			colorFrame.BackgroundColor3 = previewColor
+		end
+	end
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed then return end
+	
+		local input = textBox.Text:lower()
+	
+		-- reset
+		if input == "reset" then
+			Lighting.Brightness = originalBrightness
+	
+			if colorFrame then
+				local gray = originalBrightness / 2
+				colorFrame.BackgroundColor3 = Color3.new(gray, gray, gray)
+			end
+			return
+		end
+	
+		local brightness = parseBrightness(textBox.Text)
+	
+		if brightness then
+			applyBrightness(brightness)
+		else
+			warn("Invalid brightness input")
+		end
+	end)
+end
+coroutine.wrap(MRXZSA_fake_script)()
+local function KJLVKSK_fake_script() -- DaCode_3.HoverButton 
+	local script = Instance.new('LocalScript', DaCode_3)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(KJLVKSK_fake_script)()
+local function TIOQPXT_fake_script() -- DaCode_3.LocalScript 
+	local script = Instance.new('LocalScript', DaCode_3)
+
+	local textBox = script.Parent
+	local Lighting = game:GetService("Lighting")
+	
+	-- UI path
+	local ui = textBox:FindFirstAncestor("LightingConfig")
+	local colorFrame = ui
+		:WaitForChild("Shifty")
+		:WaitForChild("ColorOfShiftBo")
+	
+	local originalColor = Lighting.ColorShift_Bottom
+	
+	local function parseColor(text)
+		text = text:gsub("%s+", "")
+	
+		-- 🔥 CASE 1: single number ("1", "12", "255")
+		if text:match("^%d+$") then
+			local n = tonumber(text)
+	
+			-- repeat digit logic: "12" → 121,121,121
+			local str = tostring(n)
+			local value = tonumber(str .. str .. str)
+	
+			local clamped = math.clamp(value, 0, 255)
+	
+			return Color3.fromRGB(clamped, clamped, clamped)
+		end
+	
+		-- 🔥 CASE 2: RGB "255,255,255"
+		local r, g, b = text:match("(%d+),(%d+),(%d+)")
+		if r and g and b then
+			r, g, b = tonumber(r), tonumber(g), tonumber(b)
+			r = math.clamp(r, 0, 255)
+			g = math.clamp(g, 0, 255)
+			b = math.clamp(b, 0, 255)
+	
+			return Color3.fromRGB(r, g, b)
+		end
+	
+		-- 🔥 CASE 3: HEX "#FFFFFF"
+		if text:sub(1,1) == "#" and #text == 7 then
+			local ok, color = pcall(function()
+				return Color3.fromHex(text)
+			end)
+			if ok then
+				return color
+			end
+		end
+	
+		return nil
+	end
+	
+	local function applyColor(color)
+		Lighting.ColorShift_Bottom = color
+	
+		if colorFrame then
+			colorFrame.BackgroundColor3 = color
+		end
+	end
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed then return end
+	
+		local input = textBox.Text:lower()
+	
+		-- reset
+		if input == "reset" then
+			Lighting.ColorShift_Bottom = originalColor
+			if colorFrame then
+				colorFrame.BackgroundColor3 = originalColor
+			end
+			return
+		end
+	
+		local color = parseColor(textBox.Text)
+	
+		if color then
+			applyColor(color)
+		else
+			warn("Invalid ColorShift_Bottom input")
+		end
+	end)
+end
+coroutine.wrap(TIOQPXT_fake_script)()
+local function GUBKTR_fake_script() -- DaCode_4.HoverButton 
+	local script = Instance.new('LocalScript', DaCode_4)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(GUBKTR_fake_script)()
+local function RQLV_fake_script() -- DaCode_4.LocalScript 
+	local script = Instance.new('LocalScript', DaCode_4)
+
+	local textBox = script.Parent
+	local Lighting = game:GetService("Lighting")
+	
+	-- UI path
+	local ui = textBox:FindFirstAncestor("LightingConfig")
+	local colorFrame = ui
+		:WaitForChild("Shiftyt")
+		:WaitForChild("ColorOfShiftt")
+	
+	local originalColor = Lighting.ColorShift_Top
+	
+	local function parseColor(text)
+		text = text:gsub("%s+", "")
+	
+		-- 🔥 CASE 1: single number ("1", "12", "255")
+		if text:match("^%d+$") then
+			local n = tonumber(text)
+	
+			-- repeat digit logic: "12" → 121,121,121
+			local str = tostring(n)
+			local value = tonumber(str .. str .. str)
+	
+			local clamped = math.clamp(value, 0, 255)
+	
+			return Color3.fromRGB(clamped, clamped, clamped)
+		end
+	
+		-- 🔥 CASE 2: RGB "255,255,255"
+		local r, g, b = text:match("(%d+),(%d+),(%d+)")
+		if r and g and b then
+			r, g, b = tonumber(r), tonumber(g), tonumber(b)
+			r = math.clamp(r, 0, 255)
+			g = math.clamp(g, 0, 255)
+			b = math.clamp(b, 0, 255)
+	
+			return Color3.fromRGB(r, g, b)
+		end
+	
+		-- 🔥 CASE 3: HEX "#FFFFFF"
+		if text:sub(1,1) == "#" and #text == 7 then
+			local ok, color = pcall(function()
+				return Color3.fromHex(text)
+			end)
+			if ok then
+				return color
+			end
+		end
+	
+		return nil
+	end
+	
+	local function applyColor(color)
+		Lighting.ColorShift_Top = color
+	
+		if colorFrame then
+			colorFrame.BackgroundColor3 = color
+		end
+	end
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed then return end
+	
+		local input = textBox.Text:lower()
+	
+		-- reset
+		if input == "reset" then
+			Lighting.ColorShift_Top = originalColor
+			if colorFrame then
+				colorFrame.BackgroundColor3 = originalColor
+			end
+			return
+		end
+	
+		local color = parseColor(textBox.Text)
+	
+		if color then
+			applyColor(color)
+		else
+			warn("Invalid ColorShift_Top input")
+		end
+	end)
+end
+coroutine.wrap(RQLV_fake_script)()
+local function VVYHUYI_fake_script() -- DaCode_5.HoverButton 
+	local script = Instance.new('LocalScript', DaCode_5)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(VVYHUYI_fake_script)()
+local function YYPS_fake_script() -- DaCode_5.LocalScript 
+	local script = Instance.new('LocalScript', DaCode_5)
+
+	local textBox = script.Parent
+	local Lighting = game:GetService("Lighting")
+	
+	-- UI path
+	local ui = textBox:FindFirstAncestor("LightingConfig")
+	local colorFrame = ui
+		:WaitForChild("EnviD")
+		:WaitForChild("ColorOfEnviD")
+	
+	local originalValue = Lighting.EnvironmentDiffuseScale
+	
+	local function clampValue(n)
+		return math.clamp(n, 0, 1) -- this property usually works best 0–1
+	end
+	
+	local function parseValue(text)
+		text = text:gsub("%s+", "")
+	
+		-- 🔥 CASE 1: whole number ("1", "12")
+		if text:match("^%d+$") then
+			local n = tonumber(text)
+	
+			-- turn "12" → 1.2, "5" → 0.5 (better scaling)
+			if n >= 10 then
+				n = n / 10
+			else
+				n = n / 10
+			end
+	
+			return clampValue(n)
+		end
+	
+		-- 🔥 CASE 2: decimal ("0.5", "1.2")
+		local num = tonumber(text)
+		if num then
+			return clampValue(num)
+		end
+	
+		return nil
+	end
+	
+	local function applyValue(value)
+		Lighting.EnvironmentDiffuseScale = value
+	
+		-- grayscale preview
+		if colorFrame then
+			local gray = value -- already 0–1
+			colorFrame.BackgroundColor3 = Color3.new(gray, gray, gray)
+		end
+	end
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed then return end
+	
+		local input = textBox.Text:lower()
+	
+		-- reset
+		if input == "reset" then
+			Lighting.EnvironmentDiffuseScale = originalValue
+	
+			if colorFrame then
+				local gray = originalValue
+				colorFrame.BackgroundColor3 = Color3.new(gray, gray, gray)
+			end
+			return
+		end
+	
+		local value = parseValue(textBox.Text)
+	
+		if value then
+			applyValue(value)
+		else
+			warn("Invalid EnvironmentDiffuseScale input")
+		end
+	end)
+end
+coroutine.wrap(YYPS_fake_script)()
+local function LIIQXA_fake_script() -- DaCode_6.HoverButton 
+	local script = Instance.new('LocalScript', DaCode_6)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(LIIQXA_fake_script)()
+local function NNPV_fake_script() -- DaCode_6.LocalScript 
+	local script = Instance.new('LocalScript', DaCode_6)
+
+	local textBox = script.Parent
+	local Lighting = game:GetService("Lighting")
+	
+	-- UI path
+	local ui = textBox:FindFirstAncestor("LightingConfig")
+	local colorFrame = ui
+		:WaitForChild("EnviP")
+		:WaitForChild("ColorOfEnviP")
+	
+	local originalValue = Lighting.EnvironmentSpecularScale
+	
+	local function clampValue(n)
+		return math.clamp(n, 0, 1) -- best range
+	end
+	
+	local function parseValue(text)
+		text = text:gsub("%s+", "")
+	
+		-- 🔥 CASE 1: whole number ("1", "12")
+		if text:match("^%d+$") then
+			local n = tonumber(text)
+	
+			-- scale it down nicely
+			n = n / 10
+	
+			return clampValue(n)
+		end
+	
+		-- 🔥 CASE 2: decimal ("0.5", "1.2")
+		local num = tonumber(text)
+		if num then
+			return clampValue(num)
+		end
+	
+		return nil
+	end
+	
+	local function applyValue(value)
+		Lighting.EnvironmentSpecularScale = value
+	
+		-- grayscale preview (acts like intensity bar)
+		if colorFrame then
+			local gray = value
+			colorFrame.BackgroundColor3 = Color3.new(gray, gray, gray)
+		end
+	end
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed then return end
+	
+		local input = textBox.Text:lower()
+	
+		-- reset
+		if input == "reset" then
+			Lighting.EnvironmentSpecularScale = originalValue
+	
+			if colorFrame then
+				colorFrame.BackgroundColor3 = Color3.new(originalValue, originalValue, originalValue)
+			end
+			return
+		end
+	
+		local value = parseValue(textBox.Text)
+	
+		if value then
+			applyValue(value)
+		else
+			warn("Invalid EnvironmentSpecularScale input")
+		end
+	end)
+end
+coroutine.wrap(NNPV_fake_script)()
+local function HREQ_fake_script() -- button_3.HoverButton 
+	local script = Instance.new('LocalScript', button_3)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local Lighting = game:GetService("Lighting")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State (sync with current GlobalShadows)
+	local toggled = Lighting.GlobalShadows
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Apply initial state
+	if toggled then
+		button.BackgroundColor3 = hoverColor
+		check.Visible = true
+	else
+		button.BackgroundColor3 = originalColor
+		check.Visible = false
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		if button.BackgroundColor3 == hoverColor then return end
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle Global Shadows)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		Lighting.GlobalShadows = toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(HREQ_fake_script)()
+local function NTBOQ_fake_script() -- softbutton.Hoverbutton 
+	local script = Instance.new('LocalScript', softbutton)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local Lighting = game:GetService("Lighting")
+	
+	local check = button:WaitForChild("Check")
+	local container = button.Parent
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Determine style from button name
+	local STYLE = (button.Name == "softbutton") and "Soft" or "Realistic"
+	
+	
+	
+	-- Ensure fake property exists (for safety in your system)
+	if Lighting.LightingStyle == nil then
+		Lighting.LightingStyle = "Realistic"
+	end
+	
+	-- Ensure fake property exists (for safety in your system)
+	if Lighting.LightingStyle == nil then
+		Lighting.LightingStyle = "Soft"
+	end
+	
+	
+	-- Tween helper
+	local function tweenTo(obj, color)
+		TweenService:Create(obj, tweenInfo, {
+			BackgroundColor3 = color
+		}):Play()
+	end
+	
+	-- Apply lighting presets
+	local function applyStyle(style)
+		if style == "Soft" then
+			lighting.LightingStyle = "Soft"
+	
+		elseif style == "Realistic" then
+			lighting.LightingStyle = "Realistic"
+		end
+	end
+	
+	-- Sync UI buttons
+	local function updateButtons()
+		local current = Lighting.LightingStyle
+	
+		for _, other in ipairs(container:GetChildren()) do
+			if other:IsA("TextButton") then
+				local otherCheck = other:FindFirstChild("Check")
+				local otherStyle = (other.Name == "softbutton") and "Soft" or "Realistic"
+	
+				if current == otherStyle then
+					if otherCheck then otherCheck.Visible = true end
+					other.BackgroundColor3 = hoverColor
+				else
+					if otherCheck then otherCheck.Visible = false end
+					other.BackgroundColor3 = defaultColor
+				end
+			end
+		end
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if Lighting.LightingStyle == STYLE then return end
+		tweenTo(button, hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		if Lighting.LightingStyle == STYLE then return end
+		tweenTo(button, defaultColor)
+	end)
+	
+	-- Click
+	button.MouseButton1Click:Connect(function()
+		if Lighting.LightingStyle == STYLE then return end
+	
+		-- 🔥 THIS IS YOUR NEW SYSTEM
+		Lighting.LightingStyle = STYLE
+	
+		applyStyle(STYLE)
+		updateButtons()
+	end)
+	
+	-- Keep UI synced
+	task.wait()
+	applyStyle(Lighting.LightingStyle)
+	updateButtons()
+end
+coroutine.wrap(NTBOQ_fake_script)()
+local function TQJJU_fake_script() -- button_4.Hoverbutton 
+	local script = Instance.new('LocalScript', button_4)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	local Lighting = game:GetService("Lighting")
+	
+	local check = button:WaitForChild("Check")
+	local container = button.Parent
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Determine style from button name
+	local STYLE = (button.Name == "softbutton") and "Soft" or "Realistic"
+	
+	
+	
+	-- Ensure fake property exists (for safety in your system)
+	if Lighting.LightingStyle == nil then
+		Lighting.LightingStyle = "Realistic"
+	end
+	
+	-- Ensure fake property exists (for safety in your system)
+	if Lighting.LightingStyle == nil then
+		Lighting.LightingStyle = "Soft"
+	end
+	
+	
+	-- Tween helper
+	local function tweenTo(obj, color)
+		TweenService:Create(obj, tweenInfo, {
+			BackgroundColor3 = color
+		}):Play()
+	end
+	
+	-- Apply lighting presets
+	local function applyStyle(style)
+		if style == "Soft" then
+			lighting.LightingStyle = "Soft"
+	
+		elseif style == "Realistic" then
+			lighting.LightingStyle = "Realistic"
+		end
+	end
+	
+	-- Sync UI buttons
+	local function updateButtons()
+		local current = Lighting.LightingStyle
+	
+		for _, other in ipairs(container:GetChildren()) do
+			if other:IsA("TextButton") then
+				local otherCheck = other:FindFirstChild("Check")
+				local otherStyle = (other.Name == "softbutton") and "Soft" or "Realistic"
+	
+				if current == otherStyle then
+					if otherCheck then otherCheck.Visible = true end
+					other.BackgroundColor3 = hoverColor
+				else
+					if otherCheck then otherCheck.Visible = false end
+					other.BackgroundColor3 = defaultColor
+				end
+			end
+		end
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if Lighting.LightingStyle == STYLE then return end
+		tweenTo(button, hoverColor)
+	end)
+	
+	button.MouseLeave:Connect(function()
+		if Lighting.LightingStyle == STYLE then return end
+		tweenTo(button, defaultColor)
+	end)
+	
+	-- Click
+	button.MouseButton1Click:Connect(function()
+		if Lighting.LightingStyle == STYLE then return end
+	
+		-- 🔥 THIS IS YOUR NEW SYSTEM
+		Lighting.LightingStyle = STYLE
+	
+		applyStyle(STYLE)
+		updateButtons()
+	end)
+	
+	-- Keep UI synced
+	task.wait()
+	applyStyle(Lighting.LightingStyle)
+	updateButtons()
+end
+coroutine.wrap(TQJJU_fake_script)()
+local function FJNQANA_fake_script() -- DaCode_7.HoverButton 
+	local script = Instance.new('LocalScript', DaCode_7)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(FJNQANA_fake_script)()
+local function IFLADT_fake_script() -- DaCode_7.LocalScript 
+	local script = Instance.new('LocalScript', DaCode_7)
+
+	local textBox = script.Parent
+	local Lighting = game:GetService("Lighting")
+	
+	-- UI path
+	local ui = textBox:FindFirstAncestor("LightingConfig")
+	local colorFrame = ui
+		:WaitForChild("Outdoor")
+		:WaitForChild("ColorOfOut")
+	
+	local originalColor = Lighting.OutdoorAmbient
+	
+	local function parseColor(text)
+		text = text:gsub("%s+", "")
+	
+		-- 🔥 CASE 1: single number ("1", "12", "255")
+		if text:match("^%d+$") then
+			local n = tonumber(text)
+	
+			local str = tostring(n)
+			local value = tonumber(str .. str .. str)
+	
+			local clamped = math.clamp(value, 0, 255)
+	
+			return Color3.fromRGB(clamped, clamped, clamped)
+		end
+	
+		-- 🔥 CASE 2: RGB "255,255,255"
+		local r, g, b = text:match("(%d+),(%d+),(%d+)")
+		if r and g and b then
+			r, g, b = tonumber(r), tonumber(g), tonumber(b)
+			r = math.clamp(r, 0, 255)
+			g = math.clamp(g, 0, 255)
+			b = math.clamp(b, 0, 255)
+	
+			return Color3.fromRGB(r, g, b)
+		end
+	
+		-- 🔥 CASE 3: HEX "#FFFFFF"
+		if text:sub(1,1) == "#" and #text == 7 then
+			local ok, color = pcall(function()
+				return Color3.fromHex(text)
+			end)
+			if ok then
+				return color
+			end
+		end
+	
+		return nil
+	end
+	
+	local function applyColor(color)
+		Lighting.OutdoorAmbient = color
+	
+		if colorFrame then
+			colorFrame.BackgroundColor3 = color
+		end
+	end
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if not enterPressed then return end
+	
+		local input = textBox.Text:lower()
+	
+		-- reset
+		if input == "reset" then
+			Lighting.OutdoorAmbient = originalColor
+	
+			if colorFrame then
+				colorFrame.BackgroundColor3 = originalColor
+			end
+			return
+		end
+	
+		local color = parseColor(textBox.Text)
+	
+		if color then
+			applyColor(color)
+		else
+			warn("Invalid OutdoorAmbient input")
+		end
+	end)
+end
+coroutine.wrap(IFLADT_fake_script)()
+local function GGKYBD_fake_script() -- Slider.HoverButton 
+	local script = Instance.new('LocalScript', Slider)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local check = button:WaitForChild("Check")
+	
+	-- Colors
+	local hoverColor = Color3.fromHex("#405580")
+	local defaultColor = Color3.fromRGB(40, 40, 40)
+	
+	-- Tween settings
+	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- State
+	local toggled = false
+	local originalColor = button.BackgroundColor3
+	
+	-- Function to tween color
+	local function tweenTo(color)
+		local tween = TweenService:Create(button, tweenInfo, {
+			BackgroundColor3 = color
+		})
+		tween:Play()
+	end
+	
+	-- Hover
+	button.MouseEnter:Connect(function()
+		if toggled then return end
+	
+		-- Don't hover if already hover color
+		if button.BackgroundColor3 == hoverColor then return end
+	
+		tweenTo(hoverColor)
+	end)
+	
+	-- Unhover
+	button.MouseLeave:Connect(function()
+		if toggled then return end
+	
+		tweenTo(originalColor)
+	end)
+	
+	-- Click (Toggle)
+	button.MouseButton1Click:Connect(function()
+		toggled = not toggled
+	
+		if toggled then
+			-- Turn ON
+			tweenTo(hoverColor)
+			check.Visible = true
+		else
+			-- Turn OFF
+			tweenTo(originalColor)
+			check.Visible = false
+		end
+	end)
+end
+coroutine.wrap(GGKYBD_fake_script)()
